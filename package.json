@@ -1,0 +1,19 @@
+{
+  "name": "webportfolioapi",
+  "version": "1.0.0",
+  "description": "An api for a web portfolio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bonecrushereb/webportfolioapi.git"
+  },
+  "author": "Ben Nolan <bnolancgartist@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bonecrushereb/webportfolioapi/issues"
+  },
+  "homepage": "https://github.com/bonecrushereb/webportfolioapi#readme"
+}
