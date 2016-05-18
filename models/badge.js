@@ -6,4 +6,4 @@ var badgeSchema = new mongoose.Schema({
   img: { type: String, required: true }
 });
 
-module.exports = mongoose.model('badge', badgeSchema);
+module.exports = mongoose.model('badge', badgeSchema)
