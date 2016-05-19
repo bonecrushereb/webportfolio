@@ -6,6 +6,7 @@ const request = chai.request;
 const mongoose = require('mongoose');
 const port = process.env.PORT = 1234;
 process.env.MONGODB_URI = 'mongodb://localhost/project_test_db';
+process.env.APP_SECRET = 'mysecret';
 const server = require(__dirname + '/../server');
 const Project = require(__dirname + '/../models/project');
 
@@ -21,6 +22,16 @@ describe('the server', () => {
     });
   });
   describe('The POST method', () => {
+    before((done) => {
+      request('localhost:' + port)
+      .post('/api/signup')
+      .send({ username: 'test', password: 'test' })
+      .end((err, res) => {
+        if (err) throw err;
+        this.newToken = res.body.token;
+        done();
+      });
+    });
     after((done) => {
       mongoose.connection.db.dropDatabase(() => {
         done();
@@ -29,6 +40,7 @@ describe('the server', () => {
     it('should create a project', (done) => {
       request('localhost:' + port)
       .post('/api/projects')
+      .set({ 'token': this.newToken })
       .send({
         name: 'project test',
         author: 'tester testerson',
@@ -63,6 +75,16 @@ describe('the server', () => {
 
   describe('routes that need projects in the DB', () => {
     beforeEach((done) => {
+      request('localhost:' + port)
+      .post('/api/signup')
+      .send({ username: 'test', password: 'test' })
+      .end((err, res) => {
+        if (err) throw err;
+        this.newToken = res.body.token;
+        done();
+      });
+    });
+    beforeEach((done) => {
       var newProject = new Project({
         name: 'project test',
         author: 'tester testerson',
@@ -86,6 +108,7 @@ describe('the server', () => {
     it('should change the project\'s indentity on a PUT request', (done) => {
       request('localhost:' + port)
       .put('/api/projects/' + this.project._id)
+      .set({ 'token': this.newToken })
       .send({
         name: 'project test 2',
         author: 'tester testerson 2',
@@ -103,6 +126,7 @@ describe('the server', () => {
     it('should remove the project on a DELETE request', (done) => {
       request('localhost:' + port)
       .delete('/api/projects/' + this.project._id)
+      .set({ 'token': this.newToken })
       .end((err, res) => {
         expect(err).to.eql(null);
         expect(res.body.msg).to.eql('project deleted!');
