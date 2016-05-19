@@ -27,7 +27,7 @@ authRouter.post('/signup', jsonParser, (req, res) => {
 });
 
 authRouter.get('/signin', basicHTTP, (req, res) => {
-  User.findOne({ user: req.auth.username }, (err, user) => {
+  User.findOne({ username: req.auth.username }, (err, user) => {
     if (err) return res.satus(500).json({ msg: 'database error' });
 
     if (!user) return res.status(500).json({ msg: 'user not found' });

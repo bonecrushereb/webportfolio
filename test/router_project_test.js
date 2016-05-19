@@ -104,6 +104,11 @@ describe('the server', () => {
         done();
       });
     });
+    after((done) => {
+      mongoose.connection.db.dropDatabase(() => {
+        done();
+      });
+    });
 
     it('should change the project\'s indentity on a PUT request', (done) => {
       request('localhost:' + port)
