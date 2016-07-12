@@ -10,6 +10,7 @@ mongoose.connect(process.env.MONGOD_URI ||
 
 app.use('/api', projectRouter);
 app.use('/api', badgeRouter);
+app.use(express.static(__dirname + '/build'));
 app.use((req, res) => {
   res.status(404).send('Error 404 File not found');
 });
