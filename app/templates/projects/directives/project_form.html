@@ -1,0 +1,22 @@
+<form>
+  <label for="name">Title</label>
+  <input type="text" name="title" data-ng-model="project.name">
+
+  <label for="author">Author</label>
+  <input type="text" name="author" data-ng-model="project.author">
+
+  <label for="authorUrl">AuthorUrl</label>
+  <input type="text" name="authorUrl" data-ng-model="project.authorUrl">
+
+  <label for="body">Project Description</label>
+  <input type="text" name="body" data-ng-model="project.body">
+
+  <label for="img">Image</label>
+  <input type="text" name="img" data-ng-model="project.img">
+
+  <label for="fOfStudy">Field of Study</label>
+  <input type="text" name="fOFStudy" data-ng-model="project.fOfStudy">
+
+  <button class="btn-{{action}}" type="submit" data-ng-click="projectctrl.addProjects()">{{buttonText}}</button>
+  <ng-transclude></ng-transclude>
+</form>

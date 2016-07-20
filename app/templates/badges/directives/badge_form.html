@@ -1,0 +1,13 @@
+<form>
+  <label for="title">Title</label>
+  <input type="text" name="title" data-ng-model="badge.name">
+
+  <label for="img">Image</label>
+  <input type="text" name="img" data-ng-model="badge.img" placeholder = "images/'name here' " >
+
+  <label for="body">Badge Example</label>
+  <input type="text" name="body" data-ng-model="badge.body" placeholder = "images/'name here' ">
+
+  <button class="btn-{{action}}" type="submit" data-ng-click="badgectrl.addBadges()">{{buttonText}}</button>
+  <ng-translcude></ng-translcude>
+</form>
