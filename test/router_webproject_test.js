@@ -5,9 +5,9 @@ chai.use(chaiHttp);
 const request = chai.request;
 const mongoose = require('mongoose');
 const port = process.env.PORT = 1234;
-process.env.MONGODB_URI = 'mongodb://localhost/project_test_db';
+process.env.MONGODB_URI = 'mongodb://localhost/webproject_test_db';
 const server = require(__dirname + '/../server');
-const Project = require(__dirname + '/../models/project');
+const Project = require(__dirname + '/../models/webproject');
 
 describe('the server', () => {
   before((done) => {
@@ -26,9 +26,9 @@ describe('the server', () => {
         done();
       });
     });
-    it('should create a project', (done) => {
+    it('should create a web project', (done) => {
       request('localhost:' + port)
-      .post('/api/projects')
+      .post('/api/webprojects')
       .send({
         name: 'project test',
         author: 'tester testerson',
@@ -49,9 +49,9 @@ describe('the server', () => {
   });
 
   describe('The GET method', () => {
-    it('should get all the project', (done) => {
+    it('should get all the projects', (done) => {
       request('localhost:' + port)
-      .get('/api/projects')
+      .get('/api/webprojects')
       .end((err, res) => {
         expect(err).to.eql(null);
         expect(Array.isArray(res.body)).to.eql(true);
@@ -85,7 +85,7 @@ describe('the server', () => {
 
     it('should change the project\'s indentity on a PUT request', (done) => {
       request('localhost:' + port)
-      .put('/api/projects/' + this.project._id)
+      .put('/api/webprojects/' + this.project._id)
       .send({
         name: 'project test 2',
         author: 'tester testerson 2',
@@ -102,10 +102,10 @@ describe('the server', () => {
 
     it('should remove the project on a DELETE request', (done) => {
       request('localhost:' + port)
-      .delete('/api/projects/' + this.project._id)
+      .delete('/api/webprojects/' + this.project._id)
       .end((err, res) => {
         expect(err).to.eql(null);
-        expect(res.body.msg).to.eql('project deleted!');
+        expect(res.body.msg).to.eql('web project deleted!');
         done();
       });
     });

@@ -1,10 +1,10 @@
 const Router = require('express').Router;
-const Project = require(__dirname + '/../models/project');
+const Project = require(__dirname + '/../models/gameproject');
 const bodyParser = require('body-parser').json();
 const serverErrorHandler = require(__dirname + '/../lib/error_handler');
-var projRouter = module.exports = exports = Router();
+var gameprojRouter = module.exports = exports = Router();
 
-projRouter.post('/projects', bodyParser, (req, res) => {
+gameprojRouter.post('/gameprojects', bodyParser, (req, res) => {
   var newProject = new Project(req.body);
   newProject.save((err, data) => {
     if (err) return serverErrorHandler(err, res);
@@ -12,7 +12,7 @@ projRouter.post('/projects', bodyParser, (req, res) => {
   });
 });
 
-projRouter.get('/projects', (req, res) => {
+gameprojRouter.get('/gameprojects', (req, res) => {
   Project.find(null, (err, data) => {
     if (err) return serverErrorHandler(err, res);
 
@@ -20,7 +20,7 @@ projRouter.get('/projects', (req, res) => {
   });
 });
 
-projRouter.put('/projects/:id', bodyParser, (req, res) => {
+gameprojRouter.put('/gameprojects/:id', bodyParser, (req, res) => {
   var projectData = req.body;
   delete projectData._id;
   Project.update({ _id: req.params.id }, projectData, (err) => {
@@ -29,10 +29,10 @@ projRouter.put('/projects/:id', bodyParser, (req, res) => {
   });
 });
 
-projRouter.delete('/projects/:id', (req, res) => {
+gameprojRouter.delete('/gameprojects/:id', (req, res) => {
   Project.remove({ _id: req.params.id }, (err) => {
     if (err) serverErrorHandler(err, res);
 
-    res.status(200).json({ msg: 'project deleted!' });
+    res.status(200).json({ msg: 'game project deleted!' });
   });
 });

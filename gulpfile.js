@@ -9,7 +9,11 @@ const minifyCss = require('gulp-minify-css');
 
 var children = [];
 var appFiles = ['*.js', 'lib/**/*.js', 'test/**/*.js', './routes/**/*.js', './models/**/*.js'];
-var testFiles = ['router_badge_test.js', 'router_project_test.js'];
+var testFiles = [
+  'test/router_badge_test.js',
+  'test/router_webproject_test.js',
+  'test/router_gameproject_test.js'
+];
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
