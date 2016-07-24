@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGOD_URI ||
 app.use('/api', webprojectRouter);
 app.use('/api', gameprojectRouter);
 app.use('/api', badgeRouter);
-// app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/build'));
 app.use((req, res) => {
   res.status(404).send('Error 404 File not found');
 });

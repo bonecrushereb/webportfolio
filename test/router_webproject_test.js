@@ -111,7 +111,7 @@ describe('the server', () => {
     });
 
     describe('server error', () => {
-      it('should err on a bad request', (done) => {
+      it('should error on a bad request', (done) => {
         request('localhost:' + port)
         .get('/badroute')
         .end((err, res) => {

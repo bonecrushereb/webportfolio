@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Benjamin Nolan</title>
+  </head>
+  <body data-ng-app="portApp">
+    <main>
+      <h1>Game Art</h1>
+      <section data-ng-controller="GameProjectsController as gameprojectsctrl" data-ng-init="gameprojectsctrl.getAll()">
+        <form data-ng-submit="gameprojectsctrl.createGameProject()">
+          <label for="name">Project Name</label>
+          <input type="text" name="project name" data-ng-model="gameprojectsctrl.newGameProject.name">
+
+          <label for="author">Project Author</label>
+          <input type="text" name="author" data-ng-model="gameprojectsctrl.newGameProject.author">
+
+          <label for="authorUrl">Url of Author</label>
+          <input type="text" name="authorUrl" data-ng-model="gameprojectsctrl.newGameProject.authorUrl">
+
+          <label for="img">Project Image</label>
+          <input type="text" name="img" data-ng-model="gameprojectsctrl.newGameProject.img">
+
+          <label for="body">Project Description</label>
+          <input type="text" name="body" data-ng-model="gameprojectsctrl.newGameProject.body">
+
+          <button class="create-project" type="submit">Create Project</button>
+        </form>
+
+        <ul class="gameprojectlist">
+          <li data-ng-repeat="gameproject in gameprojectsctrl.gameprojects">
+            <h2>{{gameproject.name}}</h2>
+            <img src="{{gameproject.img}}" alt="{{gameproject.name}}">
+            <p>{{gameproject.body}}</p>
+            <p>By {{gameproject.author}} - {{gameproject.authorUrl}}</p>
+          </li>
+        </ul>
+      </section>
+
+      <h1>Web Dev projects</h1>
+      <section data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
+        <form data-ng-submit="webprojectsctrl.createWebProject()">
+          <label for="name">Project Name</label>
+          <input type="text" name="project name" data-ng-model="webprojectsctrl.newWebProject.name">
+
+          <label for="author">Project Author</label>
+          <input type="text" name="author" data-ng-model="webprojectsctrl.newWebProject.author">
+
+          <label for="authorUrl">Url of Author</label>
+          <input type="text" name="authorUrl" data-ng-model="webprojectsctrl.newWebProject.authorUrl">
+
+          <label for="img">Project Image</label>
+          <input type="text" name="img" data-ng-model="webprojectsctrl.newWebProject.img">
+
+          <label for="body">Project Description</label>
+          <input type="text" name="body" data-ng-model="webprojectsctrl.newWebProject.body">
+
+          <button class="create-project" type="submit">Create Project</button>
+        </form>
+
+        <ul class="webprojectlist">
+          <li data-ng-repeat="webproject in webprojectsctrl.webprojects">
+            <h2>{{webproject.name}}</h2>
+            <img src="{{webproject.img}}" alt="{{webproject.name}}">
+            <p>{{webproject.body}}</p>
+            <p>By {{webproject.author}} - {{webproject.authorUrl}}</p>
+          </li>
+        </ul>
+      </section>
+
+      <h1>Skills</h1>
+      <section data-ng-controller="BadgesController as badgesctrl" data-ng-init="badgesctrl.getAll()">
+        <form data-ng-submit="badgesctrl.createBadge()">
+          <label for="title">Badge title</label>
+          <input type="text" name="title" data-ng-model="badgesctrl.newBadge.title">
+
+          <label for="img">Badge Image</label>
+          <input type="text" name="img" data-ng-model="badgesctrl.newBadge.img">
+
+          <label for="body">Skill Example</label>
+          <input type="text" name="body" data-ng-model="badgesctrl.newBadge.body">
+
+          <button class="create-badge" type="submit">Create Project</button>
+        </form>
+
+        <ul class="badgelist">
+          <li data-ng-repeat="badge in badgesctrl.badges">
+            <img src="{{badge.img}}" tag="{{badge.title}}">
+            <div class="showCode">
+              <img src="{{badge.body}}" tag="">
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  <script src="./bundle.js"></script>
+  </body>
+</html>
