@@ -1,0 +1,9 @@
+<li>
+  <ng-transclude></ng-transclude>
+  <img src="{{badge.img}}" tag="{{badge.title}}">
+  <div class="showCode">
+    <img src="{{badge.body}}" tag="">
+  </div>
+  <button class="btn-edit" data-ng-if="!badge.editing" data-ng-click="edit(badge)">Edit</button>
+  <button class="btn-delete" data-ng-click="remove(badge)">Delete</button>
+</li>
