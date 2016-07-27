@@ -1,0 +1,13 @@
+<form data-ng-submit="save(badge)">
+  <label for="title">Badge title</label>
+  <input type="text" name="title" data-ng-model="badge.title">
+
+  <label for="img">Badge Image</label>
+  <input type="text" name="img" data-ng-model="badge.img">
+
+  <label for="body">Skill Example</label>
+  <input type="text" name="body" data-ng-model="badge.body">
+
+  <button class="btn-{{action}}" type="submit" data-ng-click="badgesctrl.addBadges()">Create Badge</button>
+  <ng-translude></ng-translude>
+</form>
