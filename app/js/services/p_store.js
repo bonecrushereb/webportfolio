@@ -4,10 +4,10 @@ module.exports = function(app) {
       gameprojects: [],
       webprojects: [],
       badges: [],
-      addGameProjects: function(gameproject) {
+      addGameProject: function(gameproject) {
         this.gameprojects.push(gameproject);
       },
-      addWebProjects: function(webproject) {
+      addWebProject: function(webproject) {
         this.webprojects.push(webproject);
       },
       addBadge: function(badge) {

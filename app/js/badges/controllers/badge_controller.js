@@ -1,49 +1,44 @@
-var errorHandler = require('../../lib').errorHandler;
+const angular = require('angular');
 var baseUrl = require('../../config').baseUrl;
-const copy = require('angular').copy;
 
 module.exports = function(app) {
-  app.controller('BadgesController', ['$http', function($http) {
-    this.badges = [];
-    this.getAll = () => {
-      $http.get(baseUrl + '/api/badges')
-        .then((res) => {
-          this.badges = res.data;
-        }, errorHandler.bind(this));
-    };
+  app.controller('BadgesController', ['pResource', 'pStore', function(Resource, pStore) {
+    this.pStore = pStore;
+    this.badges = pStore.badges;
+    this.addBadges = pStore.addBadge.bind(pStore);
+    this.errors = [];
+    this.remote = new Resource(this.badges, this.errors, baseUrl + '/api/badges');
+    this.getAll = this.remote.getAll.bind(this.remote);
 
     this.createBadge = function() {
-      $http.post(baseUrl + '/api/badges', this.newBadge)
-        .then((res) => {
-          this.badges.push(res.data);
-          this.newBadge = null;
-        }, errorHandler.bind(this));
-    }.bind(this);
-
-    this.updateBadge = function(badge) {
-      $http.put(baseUrl + '/api/badges/' + badge._id, badge)
+      this.remote.create(this.newBadge)
         .then(() => {
-          badge.editing = false;
-        }, errorHandler.bind(this));
-    };
+          this.newBadge = null;
+        });
+    }.bind(this);
 
     this.editBadge = function(badge) {
       badge.editing = true;
-      this.backup = copy(badge);
-    }.bind(this);
+      this.original = angular.copy(badge);
+    };
 
     this.cancelBadge = function(badge) {
       badge.editing = false;
-      for (var key in this.backup) {
-        badge[key] = this.backup[key];
+      for (var key in this.original) {
+        if (this.original.hasOwnProperty(key)) {
+          badge[key] = this.original[key];
+        }
       }
     };
 
-    this.removeBadge = function(badge) {
-      $http.delete(baseUrl + '/api/badges/' + badge._id)
+    this.updateBadge = function(badge) {
+      this.remote.update(badge)
         .then(() => {
-          this.badges.splice(this.badges.indexOf(badge), 1);
-        }, errorHandler.bind(this));
-    }.bind(this);
+          badge.editing = false;
+        });
+    };
+
+
+    this.removeBadge = this.remote.remove.bind(this.remote);
   }]);
 };
