@@ -53,16 +53,19 @@
           data-action="create"
           data-badge="badgesctrl.newBadge">
         </badge-form>
-        <ul class="badgelist">
-          <badge-form
-            data-ng-if="badge.editing"
-            data-button-text="Update Badge"
-            data-action="update"
-            data-badge='badge'>
-            <button class="btn-cancel" data-ng-click="badgesctrl.cancelBadge(badge)">Cancel</button>
-        </badge-form>
+        <ul class="badgeList">
+          <badge-list-item data-ng-repeat="badge in badgesctrl.badges" data-badge="badge">
+            <badge-form
+              data-ng-if="badge.editing"
+              data-button-text="Update Badge"
+              data-action="update"
+              data-badge="badge">
+              <button class="btn-cancel" data-ng-click="badgesctrl.cancelBadge(badge)">Cancel</button>
+            </badge-form>
+          </badge-list-item>
         </ul>
       </section>
+
     </main>
   <script src="./bundle.js"></script>
   </body>

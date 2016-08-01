@@ -1,4 +1,4 @@
-xvar errorHandler = require('../../lib').errorHandler;
+var errorHandler = require('../../lib').errorHandler;
 var baseUrl = require('../../config').baseUrl;
 const copy = require('angular').copy;
 

@@ -5,13 +5,13 @@ module.exports = function(app) {
         replace: true,
         require: '^ngController',
         transclude: true,
-        templateUrl: 'templates/badges/directives/badge_list_item.html',
+        templateUrl: 'js/templates/badges/directives/badge_list_item.html',
         scope: {
           badge: '='
         },
         link: function(scope, element, attrs, controller) {
           scope.remove = controller.removeBadge;
-          scope.edit = controller.editPrey;
+          scope.edit = controller.editBadge;
         }
       };
   });

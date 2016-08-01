@@ -1,49 +1,44 @@
-var errorHandler = require('../../lib').errorHandler;
+const angular = require('angular');
 var baseUrl = require('../../config').baseUrl;
-const copy = require('angular').copy;
 
 module.exports = function(app) {
-  app.controller('GameProjectsController', ['$http', function($http) {
-    this.gameprojects = [];
-    this.getAll = () => {
-      $http.get(baseUrl + '/api/gameprojects')
-       .then((res) => {
-         this.gameprojects = res.data;
-       }, errorHandler.bind(this));
-    };
+  app.controller('GameProjectsController', ['pResource', 'pStore', function(Resource, pStore) {
+    this.pStore = pStore;
+    this.gameprojects = pStore.gameprojects;
+    this.addGameProject = pStore.addGameProject.bind(pStore);
+    this.errors = [];
+    this.remote = new Resource(this.gameprojects, this.errors, baseUrl + '/api/gameprojects');
+    this.getAll = this.remote.getAll.bind(this.remote);
 
     this.createGameProject = function() {
-      $http.post(baseUrl + '/api/gameprojects', this.newGameProject)
-        .then((res) => {
-          this.gameprojects.push(res.data);
-          this.newGameProject = null;
-        }, errorHandler.bind(this));
-    }.bind(this);
-
-    this.updateGameProject = function(gameproject) {
-      $http.put(baseUrl + '/api/gameprojects/' + gameproject._id, gameproject)
+      this.remote.create(this.newGameProject)
         .then(() => {
-          gameproject.editing = false;
-        }, errorHandler.bind(this));
-    };
+          this.newGameProject = null;
+        });
+    }.bind(this);
 
     this.editGameProject = function(gameproject) {
       gameproject.editing = true;
-      this.backup = copy(gameproject);
+      this.original = angular.copy(gameproject);
     };
 
     this.cancelGameProject = function(gameproject) {
       gameproject.editing = false;
-      for (var key in this.backup) {
-        gameproject[key] = this.backup[key];
+      for (var key in this.original) {
+        if (this.original.hasOwnProperty(key)) {
+          gameproject[key] = this.original[key];
+        }
       }
     };
 
-    this.removeGameProject = function(gameproject) {
-      $http.delete(baseUrl + '/api/gameprojects/' + gameproject._id)
+    this.updateGameProject = function(gameproject) {
+      this.remote.update(gameproject)
         .then(() => {
-          this.gameprojects.splice(this.gameprojects.indexOf(gameproject), 1);
-        }, errorHandler.bind(this));
-    }.bind(this);
+          gameproject.editing = false;
+        });
+    };
+
+
+    this.removeGameProject = this.remote.remove.bind(this.remote);
   }]);
 };
