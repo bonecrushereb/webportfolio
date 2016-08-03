@@ -12,8 +12,8 @@
   <input type="text" name="img" data-ng-model="webproject.img">
 
   <label for="body">Project Description</label>
-  <input type="text" name="body" data-ng-model="webproject.body">
+  <textarea type="text" name="body" data-ng-model="webproject.body"></textarea>
 
-  <button class="btn-{{action}}" type="submit">Create Project</button>
+  <button class="btn-{{action}}" type="submit">{{buttonText}}</button>
   <ng-transclude></ng-transclude>
 </form>

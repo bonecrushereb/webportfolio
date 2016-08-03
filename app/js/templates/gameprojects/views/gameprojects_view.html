@@ -1,0 +1,10 @@
+<section data-ng-init="gameprojectsctrl.getAll()">
+  <p><a href="/#/">Back to home</a></p>
+  <h1>Game Art</h1>
+  <article data-ng-repeat="gameproject in gameprojectsctrl.gameprojects">
+    <h2>{{gameproject.name}}</h2>
+    <img src="images/{{gameproject.img}}" alt="{{gameproject.name}}">
+    <p>{{gameproject.body}}</p>
+    <p>By {{gameproject.author}}</p>
+  </article>
+</section>

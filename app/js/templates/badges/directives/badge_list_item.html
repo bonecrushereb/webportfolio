@@ -1,9 +1,9 @@
 <li>
   <ng-transclude></ng-transclude>
   <span data-ng-if="!badge.editing">
-  <img src="{{badge.img}}" tag="{{badge.title}}">
+  <img src="images/{{badge.img}}" tag="{{badge.title}}">
   <div class="showCode">
-    <img src="{{badge.body}}" tag="">
+    <img src="images/{{badge.body}}" tag="">
   </div>
 </span>
   <button class="btn-edit" data-ng-if="!badge.editing" data-ng-click="edit(badge)">Edit</button>

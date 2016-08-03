@@ -1,0 +1,59 @@
+<h1>Game Art</h1>
+<section data-ng-controller="GameProjectsController as gameprojectsctrl" data-ng-init="gameprojectsctrl.getAll()">
+  <gameproject-form
+    data-button-text="Create Project"
+    data-action="create"
+    data-gameproject="gameprojectsctrl.newGameProject">
+  </gameproject-form>
+  <ul class="gameprojectlist">
+    <gameproject-list-item data-ng-repeat="gameproject in gameprojectsctrl.gameprojects" data-gameproject="gameproject">
+      <gameproject-form
+        data-ng-if="gameproject.editing"
+        data-button-text="Update Project"
+        data-action="update"
+        data-gameproject="gameproject">
+        <button class="btn-cancel" data-ng-click="gameprojectsctrl.cancelGameProject(gameproject)">Cancel</button>
+      </gameproject-form>
+    </gameproject-list-item>
+  </ul>
+</section>
+
+<h1>Web Dev projects</h1>
+<section data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
+  <webproject-form
+    data-button-text="Create Project"
+    data-action="create"
+    data-webproject="webprojectsctrl.newWebProject">
+  </webproject-form>
+  <ul class="webprojectlist">
+    <webproject-list-item data-ng-repeat="webproject in webprojectsctrl.webprojects" data-webproject="webproject">
+      <webproject-form
+        data-ng-if="webproject.editing"
+        data-button-text="Update Project"
+        data-action="update"
+        data-webproject="webproject">
+        <button class="btn-cancel" data-ng-click="webprojectsctrl.cancelWebProject(webproject)">Cancel</button>
+      </webproject-form>
+    </webproject-list-item>
+  </ul>
+</section>
+
+<h1>Skills</h1>
+<section data-ng-controller="BadgesController as badgesctrl" data-ng-init="badgesctrl.getAll()">
+  <badge-form
+    data-button-text="Create Badge"
+    data-action="create"
+    data-badge="badgesctrl.newBadge">
+  </badge-form>
+  <ul class="badgeList">
+    <badge-list-item data-ng-repeat="badge in badgesctrl.badges" data-badge="badge">
+      <badge-form
+        data-ng-if="badge.editing"
+        data-button-text="Update Badge"
+        data-action="update"
+        data-badge="badge">
+        <button class="btn-cancel" data-ng-click="badgesctrl.cancelBadge(badge)">Cancel</button>
+      </badge-form>
+    </badge-list-item>
+  </ul>
+</section>
