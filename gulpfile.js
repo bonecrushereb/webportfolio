@@ -91,7 +91,7 @@ gulp.task('start:server', () => {
   children.push(cp.spawn('webdriver-manager', ['start']));
 });
 
-gulp.task('build:dev', ['webpack:dev', 'static:dev', 'sass:dev']);
+gulp.task('build:dev', ['webpack:dev', 'static:dev', 'sass:dev', 'image:dev']);
 gulp.task('style:dev', ['sass:dev', 'image:dev', 'build:dev']);
 gulp.task('test', ['test:mocha']);
 gulp.task('lint', ['lint:testFiles', 'lint:appFiles']);
