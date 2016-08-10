@@ -1,5 +1,5 @@
 <h1>Game Art</h1>
-<section data-ng-controller="GameProjectsController as gameprojectsctrl" data-ng-init="gameprojectsctrl.getAll()">
+<section class="create" data-ng-controller="GameProjectsController as gameprojectsctrl" data-ng-init="gameprojectsctrl.getAll()">
   <gameproject-form
     data-button-text="Create Project"
     data-action="create"
@@ -19,7 +19,7 @@
 </section>
 
 <h1>Web Dev projects</h1>
-<section data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
+<section class="create" data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
   <webproject-form
     data-button-text="Create Project"
     data-action="create"
@@ -39,7 +39,7 @@
 </section>
 
 <h1>Skills</h1>
-<section data-ng-controller="BadgesController as badgesctrl" data-ng-init="badgesctrl.getAll()">
+<section class="create" data-ng-controller="BadgesController as badgesctrl" data-ng-init="badgesctrl.getAll()">
   <badge-form
     data-button-text="Create Badge"
     data-action="create"

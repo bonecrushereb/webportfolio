@@ -1,12 +1,14 @@
 <section data-ng-init="badgesctrl.getAll()">
-  <nav>
-    <ul>
-      <li><a href="/#/webprojects">Web Development</a></li>
-      <li><a href="/#/">Back to home</a></li>
-    </ul>
-  </nav>
-  <h1>Skills:</h1>
-  <article data-ng-repeat="badge in badgesctrl.badges">
+  <header class="pageHeader">
+    <nav>
+      <ul>
+        <li><a href="/#/webprojects">Web Development</a></li>
+        <li><a href="/#/">Back to home</a></li>
+      </ul>
+    </nav>
+    <h1>Skills</h1>
+  </header>
+  <article class="skills-list" data-ng-repeat="badge in badgesctrl.badges">
     <span>
       <img src="images/{{badge.img}}" tag="{{badge.title}}">
       <div class="showCode">
