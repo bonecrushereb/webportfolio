@@ -8,7 +8,7 @@ header {
     position: relative;
     top: 40px;
     right: 30%;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
   }
 }
@@ -36,6 +36,15 @@ article {
   }
 }
 
+.webdev {
+  p {
+    font-size: 12px;
+  }
+  .author {
+    margin-top: 10px;
+  }
+}
+
 .profile {
   img {
     margin: 30px;
@@ -48,3 +57,34 @@ p {
   width: 90%;
   font-size: 2.5em;
 }
+
+.create {
+  margin: 20px;
+}
+
+.info {
+  margin: 20px;
+
+  button {
+    background: light grey;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    height: 50px;
+    width: 75px;
+  }
+}
+
+// 
+// .skills-list li:hover{
+//   display:block;
+// }
+//
+// .showCode {
+//   display:none;
+//   width:100%;
+// }
+//
+// li.badge {
+//   margin: 0 auto;
+// }
