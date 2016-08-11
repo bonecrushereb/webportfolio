@@ -37,8 +37,6 @@ module.exports = function(app) {
           badge.editing = false;
         });
     };
-
-
     this.removeBadge = this.remote.remove.bind(this.remote);
   }]);
 };
