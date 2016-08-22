@@ -5,11 +5,11 @@
         <li><a href="/#/">Back to home</a></li>
       </ul>
     </nav>
-    <h1>Game Art</h1>
+    <h1 class="projectsh1">Game Art</h1>
   </header>
-  <article data-ng-repeat="gameproject in gameprojectsctrl.gameprojects">
+  <article class="skillslist" data-ng-repeat="gameproject in gameprojectsctrl.gameprojects">
     <h2>{{gameproject.name}}</h2>
-    <img src="images/{{gameproject.img}}" alt="{{gameproject.name}}">
+    <img class="skill" src="images/{{gameproject.img}}" alt="{{gameproject.name}}">
     <p>{{gameproject.body}}</p>
     <p>By {{gameproject.author}}</p>
   </article>

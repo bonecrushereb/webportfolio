@@ -5,10 +5,12 @@ header {
   background: #82B8D9;
   background-image: linear-gradient(#82B8D9, #BF8C6F, #F2E6D8);
   h1 {
+    width: 50%;
+    text-align: justify;
     position: relative;
-    top: 40px;
-    right: 30%;
-    font-size: 3em;
+    top: 30px;
+    left: 5%;
+    font-size: 1.5em;
     font-weight: bold;
   }
 }
@@ -25,37 +27,62 @@ article {
   }
 }
 
+/* sticky footer */
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+footer, .push {
+  height: 50px;
+}
+
+//////////////////////
 .pageHeader {
   margin: 0px;
   nav {
-    margin-top: 0px;
+    top: 10px;
   }
   h1 {
     font-size: 3em;
     right: 0;
   }
+  .projectsh1 {
+    font-size: 26px;
+  }
 }
 
 .webdev {
+  margin-bottom: 20px;
   p {
     font-size: 12px;
   }
   .author {
     margin-top: 10px;
   }
+  img {
+    width: 350px;
+  }
 }
 
 .profile {
   img {
     margin: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
     width: 50%;
   }
 }
 
-p {
-  margin-left: 30px;
-  width: 90%;
-  font-size: 2.5em;
+.home {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  p {
+    margin-left: 30px;
+    width: 90%;
+    font-size: 16px;
+  }
 }
 
 .create {
@@ -75,16 +102,14 @@ p {
   }
 }
 
-// 
-// .skills-list li:hover{
-//   display:block;
-// }
-//
-// .showCode {
-//   display:none;
-//   width:100%;
-// }
-//
-// li.badge {
-//   margin: 0 auto;
-// }
+.skillslist {
+  .skill {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+  p{
+    margin: 10px;
+    margin-top: 0px;
+    font-size: 14px;
+  }
+}
