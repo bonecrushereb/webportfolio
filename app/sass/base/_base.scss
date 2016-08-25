@@ -1,3 +1,11 @@
+/* sticky footer */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+//////////////////////
 body {
   background: #F2E6D8;
   font-family: $openFont;
@@ -12,4 +20,5 @@ a {
 
 a:hover {
   color: #405B6B;
+  font-weight: bold;
 }

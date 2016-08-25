@@ -1,0 +1,63 @@
+@media (min-width: 600px) {
+  header {
+    height: 200px;
+    margin-bottom: 20px;
+    h1 {
+      right: 35%;
+      font-size: 3em;
+    }
+  }
+
+  nav {
+    ul {
+      li {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .profile {
+    img {
+      margin-top: 0px;
+      width: 40%;
+      height: 40%;
+  }
+}
+
+  .home {
+    p {
+      font-size: 36px;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .webdev {
+    img {
+      width: auto;
+    }
+    p {
+      margin-left: 24%;
+      width: 50%;
+      font-size: 26px;
+    }
+  }
+  .pageHeader {
+    .projectsh1 {
+      font-size: 48px;
+    }
+  }
+
+  .skillslist {
+    .skill {
+      width: auto;
+      margin-bottom: 20px;
+    }
+    p{
+      width: 50%;
+      margin-left: 24%;
+      margin-top: 0px;
+      font-size: 16px;
+    }
+  }
+}

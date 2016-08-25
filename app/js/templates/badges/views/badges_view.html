@@ -6,13 +6,13 @@
         <li><a href="/#/">Back to home</a></li>
       </ul>
     </nav>
-    <h1>Skills</h1>
+    <h1 class="projectsh1">Skills</h1>
   </header>
-  <article class="skills-list" data-ng-repeat="badge in badgesctrl.badges">
+  <article class="skillslist" data-ng-repeat="badge in badgesctrl.badges">
     <span>
       <img src="images/{{badge.img}}" tag="{{badge.title}}">
       <div class="showCode">
-        <img src="images/{{badge.body}}" tag="">
+        <img class="skill" src="images/{{badge.body}}" tag="">
       </div>
     </span>
   </article>

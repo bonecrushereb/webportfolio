@@ -1,14 +1,15 @@
 nav {
   display: block;
   position: relative;
+  top: 40px;
   text-align: center;
   width: 100%;
   padding: 0;
   list-style: none;
   ul {
     position: relative;
-    left: 390px;
-    width: 50%;
+    left: 20px;
+    width: 100%;
     padding: 0px;
     margin: 0px;
 
@@ -17,7 +18,7 @@ nav {
       display: inline;
       padding: 0px;
       margin-right: 20px;
-      font-size: 1.5em;
+      font-size: 14px;
       padding: .5em .2em;
       list-style-type: none;
       height: 40px;
@@ -25,26 +26,21 @@ nav {
   }
 }
 
-.main-footer, .push {
-      height: 40px;
-}
-
-.main-footer {
+footer {
     background: #BFB95E;
     width: 100%;
+     ul {
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+      li {
+        display: inline;
+        padding: 20px;
+        margin-right: .4em;
+        font-size: 1em;
+        padding: .5em .2em;
+        list-style-type: none;
+        height: 40px;
+      }
+    }
   }
-
-.main-footer ul {
-  text-align: center;
-  padding: 0px;
-  margin: 0px;
-}
-.main-footer li {
-  display: inline;
-  padding: 20px;
-  margin-right: .4em;
-  font-size: 1em;
-  padding: .5em .2em;
-  list-style-type: none;
-  height: 40px;
-}
