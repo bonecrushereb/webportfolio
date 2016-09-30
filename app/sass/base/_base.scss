@@ -7,9 +7,11 @@ html, body {
 
 //////////////////////
 body {
-  background: #F2E6D8;
+  background: url('../images/wavebackground.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   font-family: $openFont;
-  text-align: center;
   color: #202026;
 }
 

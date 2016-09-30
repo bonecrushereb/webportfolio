@@ -14,6 +14,9 @@
   <label for="body">Project Description</label>
   <textarea type="text" name="body" data-ng-model="webproject.body"></textarea>
 
+  <label for="techused">Technology Used</label>
+  <input type="text" name="techused" data-ng-model="webproject.techused">
+
   <button class="btn-{{action}}" type="submit">{{buttonText}}</button>
   <ng-transclude></ng-transclude>
 </form>
