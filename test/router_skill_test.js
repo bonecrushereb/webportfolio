@@ -5,9 +5,9 @@ chai.use(chaiHttp);
 const request = chai.request;
 const mongoose = require('mongoose');
 const port = process.env.PORT = 1234;
-process.env.MONGODB_URI = 'mongod://localhost/badge_test_db';
+process.env.MONGODB_URI = 'mongod://localhost/skill_test_db';
 const server = require(__dirname + '/../server');
-const Badge = require(__dirname + '/../models/badge');
+const Skill = require(__dirname + '/../models/skills');
 
 describe('the server', () => {
   before((done) => {
@@ -26,28 +26,26 @@ describe('the server', () => {
         done();
       });
     });
-    it('should create a badge', (done) => {
+    it('should create a skill', (done) => {
       request('localhost:' + port)
-      .post('/api/badges')
+      .post('/api/skills')
       .send({
         title: 'test',
-        body: 'I am a test',
-        img: 'test.jpg'
+        skill: 'I am a test'
       })
       .end((err, res) => {
         expect(err).to.eql(null);
         expect(res.body.title).to.eql('test');
-        expect(res.body.body).to.eql('I am a test');
-        expect(res.body.img).to.eql('test.jpg');
+        expect(res.body.skill).to.eql('I am a test');
         done();
       });
     });
   });
 
   describe('The GET method', () => {
-    it('should get all the badges', (done) => {
+    it('should get all the skills', (done) => {
       request('localhost:' + port)
-      .get('/api/badges')
+      .get('/api/skills')
       .end((err, res) => {
         expect(err).to.eql(null);
         expect(Array.isArray(res.body)).to.eql(true);
@@ -57,21 +55,20 @@ describe('the server', () => {
     });
   });
 
-  describe('routes that need badges in the DB', () => {
+  describe('routes that need skills in the DB', () => {
     beforeEach((done) => {
-      var newBadge = new Badge({
+      var newSkill = new Skill({
         title: 'test',
-        body: 'I am a test',
-        img: 'test.jpg'
+        skill: 'I am a test'
       });
-      newBadge.save((err, data) => {
+      newSkill.save((err, data) => {
         if (err) throw err;
-        this.badge = data;
+        this.skill = data;
         done();
       });
     });
     afterEach((done) => {
-      this.badge.remove((err) => {
+      this.skill.remove((err) => {
         if (err) throw err;
         done();
       });
@@ -82,13 +79,12 @@ describe('the server', () => {
       });
     });
 
-    it('should change the badge\'s identity on a put request', (done) => {
+    it('should change the skill\'s identity on a put request', (done) => {
       request('localhost:' + port)
-      .put('/api/badges/' + this.badge._id)
+      .put('/api/skills/' + this.skill._id)
       .send({
         title: 'test2',
-        body: 'I am a test x 2',
-        img: 'test2.jpg'
+        skill: 'I am a test x 2'
       })
       .end((err, res) => {
         expect(err).to.eql(null);
@@ -97,12 +93,12 @@ describe('the server', () => {
       });
     });
 
-    it('Should delete a badge on a DELETE request', (done) => {
+    it('Should delete a skill on a DELETE request', (done) => {
       request('localhost:' + port)
-      .delete('/api/badges/' + this.badge._id)
+      .delete('/api/skills/' + this.skill._id)
       .end((err, res) => {
         expect(err).to.eql(null);
-        expect(res.body.msg).to.eql('badge has been deleted');
+        expect(res.body.msg).to.eql('skill has been deleted');
         done();
       });
     });

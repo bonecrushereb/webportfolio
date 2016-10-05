@@ -34,7 +34,8 @@ describe('the server', () => {
         author: 'tester testerson',
         authorUrl: 'www.tests.com',
         body: 'I like tests',
-        img: 'test.jpg'
+        img: 'test.jpg',
+        techused: 'testtech'
       })
       .end((err, res) => {
         expect(err).to.eql(null);
@@ -43,6 +44,7 @@ describe('the server', () => {
         expect(res.body.authorUrl).to.eql('www.tests.com');
         expect(res.body.body).to.eql('I like tests');
         expect(res.body.img).to.eql('test.jpg');
+        expect(res.body.techused).to.eql('testtech');
         done();
       });
     });
@@ -68,7 +70,8 @@ describe('the server', () => {
         author: 'tester testerson',
         authorUrl: 'www.tests.com',
         body: 'I like tests',
-        img: 'test.jpg'
+        img: 'test.jpg',
+        techused: 'testtech'
       });
       newProject.save((err, data) => {
         if (err) console.log(err);
@@ -91,7 +94,8 @@ describe('the server', () => {
         author: 'tester testerson 2',
         authorUrl: 'www.tests.com 2',
         body: 'I like tests 2',
-        img: 'test2.jpg'
+        img: 'test2.jpg',
+        techused: 'techtest 2'
       })
       .end((err, res) => {
         expect(err).to.eql(null);
