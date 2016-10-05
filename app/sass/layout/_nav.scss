@@ -1,1 +1,14 @@
+nav {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 200px;
+  right: 250px;
+  z-index: 1;
 
+  li {
+    font-size: 20px;
+    margin-top: 60px;
+  }
+}
