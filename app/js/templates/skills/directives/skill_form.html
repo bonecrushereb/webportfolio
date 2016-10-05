@@ -1,0 +1,10 @@
+<form data-ng-submit="save(skill)">
+  <label for="title">Skills title</label>
+  <input type="text" name="title" data-ng-model="skill.title">
+
+  <label for="skill">Development or Game Art</label>
+  <input type="text" name="skill" data-ng-model="skill.skill">
+
+  <button class="btn-{{action}}" type="submit" data-ng-click="skillsctrl.addSkills()">{{buttonText}}</button>
+  <ng-transclude></ng-transclude>
+</form>

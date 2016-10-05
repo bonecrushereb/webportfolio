@@ -1,17 +1,17 @@
 module.exports = function(app) {
-  app.directive('badgeListItem', function() {
+  app.directive('skillListItem', function() {
     return {
       restrict: 'EAC',
       replace: true,
       require: '^ngController',
       transclude: true,
-      templateUrl: 'js/templates/badges/directives/badge_list_item.html',
+      templateUrl: 'js/templates/skills/directives/skills_list_item.html',
       scope: {
-        badge: '='
+        skill: '='
       },
       link: function(scope, element, attrs, controller) {
-        scope.remove = controller.removeBadge;
-        scope.edit = controller.editBadge;
+        scope.remove = controller.removeSkill;
+        scope.edit = controller.editSkill;
       }
     };
   });

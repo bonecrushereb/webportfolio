@@ -3,15 +3,15 @@ module.exports = function(app) {
     return {
       gameprojects: [],
       webprojects: [],
-      badges: [],
+      skills: [],
       addGameProject: function(gameproject) {
         this.gameprojects.push(gameproject);
       },
       addWebProject: function(webproject) {
         this.webprojects.push(webproject);
       },
-      addBadge: function(badge) {
-        this.badges.push(badge);
+      addSkill: function(skill) {
+        this.skills.push(skill);
       }
     };
   });

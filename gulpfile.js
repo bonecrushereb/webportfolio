@@ -10,7 +10,7 @@ const minifyCss = require('gulp-minify-css');
 var children = [];
 var appFiles = ['*.js', 'lib/**/*.js', 'test/**/*.js', './routes/**/*.js', './models/**/*.js'];
 var testFiles = [
-  'test/router_badge_test.js',
+  'test/router_skill_test.js',
   'test/router_webproject_test.js',
   'test/router_gameproject_test.js'
 ];

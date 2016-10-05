@@ -1,20 +1,20 @@
 module.exports = function(app) {
-  app.directive('badgeForm', function() {
+  app.directive('skillForm', function() {
     return {
       restrict: 'EAC',
       replace: true,
       require: '^ngController',
       transclude: true,
-      templateUrl: 'js/templates/badges/directives/badge_form.html',
+      templateUrl: 'js/templates/skills/directives/skill_form.html',
       scope: {
-        badge: '=',
+        skill: '=',
         buttonText: '@',
         action: '@'
       },
       link: function(scope, element, attrs, controller) {
         var actions = {
-          update: controller.updateBadge,
-          create: controller.createBadge
+          update: controller.updateSkill,
+          create: controller.createSkill
         };
         scope.save = actions[scope.action];
       }

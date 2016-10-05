@@ -39,21 +39,21 @@
 </section>
 
 <h1>Skills</h1>
-<section class="create" data-ng-controller="BadgesController as badgesctrl" data-ng-init="badgesctrl.getAll()">
-  <badge-form
-    data-button-text="Create Badge"
+<section class="create" data-ng-controller="SkillsController as skillsctrl" data-ng-init="skillsctrl.getAll()">
+  <skill-form
+    data-button-text="Create Skill"
     data-action="create"
-    data-badge="badgesctrl.newBadge">
-  </badge-form>
-  <ul class="badgeList">
-    <badge-list-item data-ng-repeat="badge in badgesctrl.badges" data-badge="badge">
-      <badge-form
-        data-ng-if="badge.editing"
-        data-button-text="Update Badge"
+    data-skill="skillsctrl.newSkill">
+  </skill-form>
+  <ul class="skillList">
+    <skill-list-item data-ng-repeat="skill in skillsctrl.skills" data-skill="skill">
+      <skill-form
+        data-ng-if="skill.editing"
+        data-button-text="Update Skill"
         data-action="update"
-        data-badge="badge">
-        <button class="btn-cancel" data-ng-click="badgesctrl.cancelBadge(badge)">Cancel</button>
-      </badge-form>
-    </badge-list-item>
+        data-skill="skill">
+        <button class="btn-cancel" data-ng-click="skillsctrl.cancleSkill(skill)">Cancel</button>
+      </skill-form>
+    </skill-list-item>
   </ul>
 </section>

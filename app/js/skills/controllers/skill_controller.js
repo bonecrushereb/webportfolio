@@ -2,12 +2,12 @@ const angular = require('angular');
 var baseUrl = require('../../config').baseUrl;
 
 module.exports = function(app) {
-  app.controller('SkillsController', ['pResource', 'pStore', function(Resource, pStore) {
+  app.controller('SkillssController', ['pResource', 'pStore', function(Resource, pStore) {
     this.pStore = pStore;
     this.skills = pStore.skills;
     this.addSkills = pStore.addSkills.bind(pStore);
     this.errors = [];
-    this.remote = new Resource(this.Skills, this.errors, baseUrl + '/api/skills');
+    this.remote = new Resource(this.skills, this.errors, baseUrl + '/api/skills');
     this.getAll = this.remote.getAll.bind(this.remote);
 
     this.createSkill = function() {
@@ -31,7 +31,7 @@ module.exports = function(app) {
       }
     };
 
-    this.updatSkill = function(skill) {
+    this.updateSkill = function(skill) {
       this.remote.update(skill)
         .then(() => {
           skill.editing = false;
