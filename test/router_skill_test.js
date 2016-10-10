@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT = 1234;
 process.env.MONGODB_URI = 'mongod://localhost/skill_test_db';
 const server = require(__dirname + '/../server');
-const Skill = require(__dirname + '/../models/skills');
+const Skill = require(__dirname + '/../models/skill');
 
 describe('the server', () => {
   before((done) => {
