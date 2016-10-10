@@ -1,5 +1,5 @@
 const Router = require('express').Router;
-const Skill = require(__dirname + '/../models/skills');
+const Skill = require(__dirname + '/../models/skill');
 const bodyParser = require('body-parser').json();
 const serverErrorHandler = require(__dirname + '/../lib/error_handler');
 var skillsRouter = module.exports = exports = Router();
