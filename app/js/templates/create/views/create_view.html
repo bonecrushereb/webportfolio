@@ -37,23 +37,3 @@
     </webproject-list-item>
   </ul>
 </section>
-
-<h1>Skills</h1>
-<section class="create" data-ng-controller="SkillsController as skillsctrl" data-ng-init="skillsctrl.getAll()">
-  <skill-form
-    data-button-text="Create Skill"
-    data-action="create"
-    data-skill="skillsctrl.newSkill">
-  </skill-form>
-  <ul class="skillList">
-    <skill-list-item data-ng-repeat="skill in skillsctrl.skills" data-skill="skill">
-      <skill-form
-        data-ng-if="skill.editing"
-        data-button-text="Update Skill"
-        data-action="update"
-        data-skill="skill">
-        <button class="btn-cancel" data-ng-click="skillsctrl.cancleSkill(skill)">Cancel</button>
-      </skill-form>
-    </skill-list-item>
-  </ul>
-</section>
