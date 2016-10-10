@@ -1,0 +1,18 @@
+module.exports = function(app) {
+  app.directive('skillListItem', function() {
+    return {
+      restrict: 'EAC',
+      replace: true,
+      require: '^ngController',
+      transclude: true,
+      templateURl: 'js/templates/skills/directives/skill_list_item.html',
+      scope: {
+        skill: '='
+      },
+      link: function(scope, element, attrs, controller) {
+        scope.remove = controller.removeSkill;
+        scope.edit = controller.editSkill;
+      }
+    };
+  });
+};
