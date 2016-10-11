@@ -1,9 +1,0 @@
-<li class="info">
-  <h2>{{gameproject.name}}</h2>
-  <img src="images/{{gameproject.img}}" alt="{{gameproject.name}}">
-  <p>{{gameproject.body}}</p>
-  <p>By {{gameproject.author}}</p>
-  <button class="btn-edit" data-ng-if="!gameproject.editing" data-ng-click="edit(gameproject)">Edit</button>
-  <button class="btn-delete" data-ng-click="remove(gameproject)">Delete</button>
-  <ng-transclude></ng-transclude>
-</li>
