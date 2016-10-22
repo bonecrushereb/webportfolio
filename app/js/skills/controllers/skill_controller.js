@@ -7,8 +7,14 @@ module.exports = function(app) {
     this.skills = pStore.skills;
     this.addSkill = pStore.addSkill.bind(pStore);
     this.errors = [];
+    this.web = [];
+    this.gameArt = [];
+    console.log('web: ', this.web);
+    console.log('gameArt: ', this.gameArt);
     this.remote = new Resource(this.skills, this.errors, baseUrl + '/api/skills');
     this.getAll = this.remote.getAll.bind(this.remote);
+
+    // console.log(this.skills);
 
     this.createSkill = function() {
       this.remote.create(this.newSkill)
@@ -39,5 +45,16 @@ module.exports = function(app) {
     };
 
     this.removeSkill = this.remote.remove.bind(this.remote);
+
+    this.splitSkill = function(web, gameArt, skills) {
+      var skillsArr = this.skills;
+      for (var i = 0; i < skillsArr.length; i++) {
+        if (skills[i].career === 'web') {
+          web.push(skills[i]);
+        } else if (skills[i].career === 'gameArt') {
+          gameArt.push(skills[i]);
+        }
+      }
+    };
   }]);
 };

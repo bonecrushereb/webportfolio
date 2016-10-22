@@ -1,12 +1,12 @@
 const angular = require('angular');
-const portApp = angular.module('portApp');
+const portApp = angular.module('portApp', [require('angular-route')]);
 
 require('./services')(portApp);
 require('./skills')(portApp);
-require('/gameprojects')(portApp);
+require('./gameprojects')(portApp);
 require('./webprojects')(portApp);
 
-portApp.config('$routeProvider', function($rp) {
+portApp.config(['$routeProvider', function($rp) {
   $rp
     .when('/', {
       templateUrl: 'js/templates/home/views/home_view.html'
@@ -32,4 +32,4 @@ portApp.config('$routeProvider', function($rp) {
     .otherwise({
       redirectTo: '/'
     });
-});
+}]);

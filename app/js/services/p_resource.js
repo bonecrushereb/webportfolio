@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  app.factory('pResource', ['http', 'pHandleError', function($http, pError) {
+  app.factory('pResource', ['$http', 'pHandleError', function($http, pError) {
     var baseUrl = require('../config').baseUrl;
     var Resource = function(resourceArr, errorsArr, baseUrl) {
       this.data = resourceArr;
