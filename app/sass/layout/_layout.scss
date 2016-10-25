@@ -21,3 +21,32 @@ header {
   position: relative;
   left: 20%;
 }
+
+.profilepic {
+  position: relative;
+  left: 100px;
+  top: 150px;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  article {
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+
+.availability {
+  h2 {
+    color: #33a805;
+    font-size: 36px;
+    text-decoration: underline;
+  }
+  ul {
+    li {
+      padding: 10px;
+      display: inline-block;
+    }
+  }
+}

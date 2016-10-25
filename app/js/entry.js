@@ -11,6 +11,9 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/', {
       templateUrl: 'js/templates/home/views/home_view.html'
     })
+    .when('/about', {
+      templateUrl: 'js/templates/about/views/about_view.html'
+    })
     .when('/webprojects', {
       templateUrl: 'js/templates/webprojects/views/webprojects_view.html',
       controller: 'WebProjectsController',
@@ -24,11 +27,11 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/create', {
       templateUrl: 'js/templates/create/views/create_view.html'
     })
-    .when('/skills', {
-      templateUrl: 'js/templates/skills/views/skills_view.html',
-      controller: 'SkillsController',
-      controllerAs: 'skillsctrl'
-    })
+    // .when('/skills', {
+    //   templateUrl: 'js/templates/skills/views/skills_view.html',
+    //   controller: 'SkillsController',
+    //   controllerAs: 'skillsctrl'
+    // })
     .otherwise({
       redirectTo: '/'
     });
