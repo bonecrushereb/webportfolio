@@ -5,6 +5,9 @@
   <label for="author">Project Author</label>
   <input type="text" name="author" data-ng-model="gameproject.author">
 
+  <label for="authorUrl">Url of Author</label>
+  <input type="text" name="authorUrl" data-ng-model="gameproject.authorUrl">
+
   <label for="img">Project Image</label>
   <input type="text" name="img" data-ng-model="gameproject.img">
 
@@ -13,6 +16,8 @@
 
   <label for="techused">Technology Used</label>
   <input type="text" name="techused" data-ng-model="gameproject.techused">
+
   <button class="btn-{{action}}" type="submit">{{buttonText}}</button>
+
   <ng-transclude></ng-transclude>
 </form>

@@ -1,49 +1,43 @@
-var errorHandler = require('../../lib').errorHandler;
+const angular = require('angular');
 var baseUrl = require('../../config').baseUrl;
-const copy = require('angular').copy;
 
 module.exports = function(app) {
-  app.controller('WebProjectsController', ['$http', function($http) {
-    this.webprojects = [];
-    this.getAll = () => {
-      $http.get(baseUrl + '/api/webprojects')
-        .then((res) => {
-          this.webprojects = res.data;
-        }, errorHandler.bind(this));
-    };
+  app.controller('WebProjectsController', ['pResource', 'pStore', function(Resource, pStore) {
+    this.pStore = pStore;
+    this.webprojects = pStore.webprojects;
+    this.addWebProject = pStore.addWebProject.bind(pStore);
+    this.errors = [];
+    this.remote = new Resource(this.webprojects, this.errors, baseUrl + '/api/webprojects');
+    this.getAll = this.remote.getAll.bind(this.remote);
 
     this.createWebProject = function() {
-      $http.post(baseUrl + '/api/webprojects', this.newWebProject)
-        .then((res) => {
-          this.webprojects.push(res.data);
-          this.newWebProject = null;
-        }, errorHandler.bind(this));
-    }.bind(this);
-
-    this.updateWebProject = function(webproject) {
-      $http.put(baseUrl + '/api/webprojects/' + webproject._id, webproject)
+      this.remote.create(this.newWebProject)
         .then(() => {
-          webproject.editing = false;
-        }, errorHandler.bind(this));
-    };
+          this.newWebProject = null;
+        });
+    }.bind(this);
 
     this.editWebProject = function(webproject) {
       webproject.editing = true;
-      this.backup = copy(webproject);
+      this.original = angular.copy(webproject);
     };
 
     this.cancelWebProject = function(webproject) {
       webproject.editing = false;
-      for (var key in this.backup) {
-        webproject[key] = this.backup[key];
+      for (var key in this.original) {
+        if (this.original.hasOwnProperty(key)) {
+          webproject[key] = this.original[key];
+        }
       }
     };
 
-    this.removeWebProject = function(webproject) {
-      $http.delete(baseUrl + '/api/webprojects/' + webproject._id)
+    this.updateWebProject = function(webproject) {
+      this.remote.update(webproject)
         .then(() => {
-          this.webprojects.splice(this.webprojects.indexOf(webproject), 1);
-        }, errorHandler.bind(this));
-    }.bind(this);
+          webproject.editing = false;
+        });
+    };
+
+    this.removeWebProject = this.remote.remove.bind(this.remote);
   }]);
 };

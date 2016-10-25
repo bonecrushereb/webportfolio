@@ -1,4 +1,4 @@
-nav {
+.navHeader {
   text-align: center;
   display: flex;
   justify-content: flex-end;
@@ -10,5 +10,31 @@ nav {
   li {
     font-size: 20px;
     margin-top: 60px;
+  }
+}
+
+.pagenav {
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 40px;
+  padding: 0;
+  list-style: none;
+  ul {
+    // display: flex;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  li {
+    width: 250px;
+    display: inline;
+    padding: 0;
+    margin-right: 40px;
+    font-size: 1.5em;
+    padding: 40px;
+    list-style-type: none;
+    height: 40px;
   }
 }

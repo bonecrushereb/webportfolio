@@ -38,7 +38,6 @@ module.exports = function(app) {
         });
     };
 
-
     this.removeGameProject = this.remote.remove.bind(this.remote);
   }]);
 };

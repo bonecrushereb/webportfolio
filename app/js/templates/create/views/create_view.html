@@ -12,19 +12,19 @@
         data-button-text="Update Project"
         data-action="update"
         data-gameproject="gameproject">
-        <button class="btn-cancel" data-ng-click="gameprojectsctrl.cancelGameProject(gameproject)">Cancel</button>
+        <button class="btn-cancel" data-ng-click="gameprojectctrl.cancelGameProject(gameproject)">Cancel</button>
       </gameproject-form>
     </gameproject-list-item>
   </ul>
 </section>
 
-<h1>Web Dev projects</h1>
+<h1>Web Development</h1>
 <section class="create" data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
-  <webproject-form
+  <gameproject-form
     data-button-text="Create Project"
     data-action="create"
-    data-webproject="webprojectsctrl.newWebProject">
-  </webproject-form>
+    data-gameproject="webprojectsctrl.newWebProject">
+  </gameproject-form>
   <ul class="webprojectlist">
     <webproject-list-item data-ng-repeat="webproject in webprojectsctrl.webprojects" data-webproject="webproject">
       <webproject-form
@@ -38,21 +38,21 @@
   </ul>
 </section>
 
-<h1>Skills</h1>
+<h1>Skill</h1>
 <section class="create" data-ng-controller="SkillsController as skillsctrl" data-ng-init="skillsctrl.getAll()">
   <skill-form
     data-button-text="Create Skill"
     data-action="create"
     data-skill="skillsctrl.newSkill">
   </skill-form>
-  <ul class="skillList">
+  <ul class=skilllist>
     <skill-list-item data-ng-repeat="skill in skillsctrl.skills" data-skill="skill">
       <skill-form
         data-ng-if="skill.editing"
         data-button-text="Update Skill"
         data-action="update"
         data-skill="skill">
-        <button class="btn-cancel" data-ng-click="skillsctrl.cancleSkill(skill)">Cancel</button>
+        <button class="btn-cancel" data-ng-click="skillsctrl.cancelSkill(skill)">Cancel</button>
       </skill-form>
     </skill-list-item>
   </ul>
