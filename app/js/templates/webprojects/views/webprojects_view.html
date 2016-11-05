@@ -1,0 +1,31 @@
+<header>
+  <h1><a href="/#/">Benjamin Nolan</a></h1>
+  <footer>
+    <ul>
+      <li class="fa fa-facebook-official fa-large"></li>
+      <li class="fa fa-github fa-large"></li>
+      <li class="fa fa-linkedin-square fa-large"></li>
+      <li class="fa fa-twitter fa-large"></li>
+    </ul>
+  </footer>
+  <ul class="contactInfo">
+    <li>bnolancgartist@gmail.com</li>
+    <li>(858)366-5866</li>
+  </ul>
+</header>
+<nav class="pagenav">
+  <ul>
+    <li><a href="/#/webprojects">Web Development</a></li>
+    <li><a href="/#/gameprojects">Game Art</a></li>
+    <li><a href="/#/about">About</a></li>
+    <li><a href="/#/skills">Skills</a></li>
+  </ul>
+</nav>
+<section data-ng-init="webprojectsctrl.getAll()">
+  <section data-ng-repeat=" webproject in webprojectsctrl.webprojects">
+    <article class="project">
+      <a href="/#/{{webproject.name.toLowerCase()}}"><img src="images/{{webproject.img}}" alt="{{webproject.name}}"></a>
+      <h3>{{webproject.name}}</h3>
+    </article>
+  </section>
+</section>
