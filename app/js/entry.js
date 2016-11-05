@@ -19,6 +19,12 @@ portApp.config(['$routeProvider', function($rp) {
       controller: 'WebProjectsController',
       controllerAs: 'webprojectsctrl'
     })
+    .when('/hue-manatee', {
+      templateUrl: 'js/templates/webprojects/views/hue-manatee_view.html'
+    })
+    .when('/ebb-tracker', {
+      templateUrl: 'js/templates/webprojects/views/ebb-tracker_view.html'
+    })
     .when('/gameprojects', {
       templateUrl: 'js/templates/gameprojects/views/gameprojects_view.html',
       controller: 'GameProjectsController',
