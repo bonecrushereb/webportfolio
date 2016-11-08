@@ -25,6 +25,15 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/ebb-tracker', {
       templateUrl: 'js/templates/webprojects/views/ebb-tracker_view.html'
     })
+    .when('/twitter-react', {
+      templateUrl: 'js/templates/webprojects/views/twitter-react_view.html'
+    })
+    .when('/knowhuddle', {
+      templateUrl: 'js/templates/webprojects/views/knowhuddle_view.html'
+    })
+    .when('/responsibuyer', {
+      templateUrl: 'js/templates/webprojects/views/responsibuyer_view.html'
+    })
     .when('/gameprojects', {
       templateUrl: 'js/templates/gameprojects/views/gameprojects_view.html',
       controller: 'GameProjectsController',
