@@ -42,11 +42,11 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/create', {
       templateUrl: 'js/templates/create/views/create_view.html'
     })
-    // .when('/skills', {
-    //   templateUrl: 'js/templates/skills/views/skills_view.html',
-    //   controller: 'SkillsController',
-    //   controllerAs: 'skillsctrl'
-    // })
+    .when('/skills', {
+      templateUrl: 'js/templates/skills/views/skills_view.html'
+      // controller: 'SkillsController',
+      // controllerAs: 'skillsctrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
