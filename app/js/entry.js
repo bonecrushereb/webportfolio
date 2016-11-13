@@ -25,6 +25,15 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/ebb-tracker', {
       templateUrl: 'js/templates/webprojects/views/ebb-tracker_view.html'
     })
+    .when('/twitter-react', {
+      templateUrl: 'js/templates/webprojects/views/twitter-react_view.html'
+    })
+    .when('/knowhuddle', {
+      templateUrl: 'js/templates/webprojects/views/knowhuddle_view.html'
+    })
+    .when('/responsibuyer', {
+      templateUrl: 'js/templates/webprojects/views/responsibuyer_view.html'
+    })
     .when('/gameprojects', {
       templateUrl: 'js/templates/gameprojects/views/gameprojects_view.html',
       controller: 'GameProjectsController',
@@ -33,11 +42,11 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/create', {
       templateUrl: 'js/templates/create/views/create_view.html'
     })
-    // .when('/skills', {
-    //   templateUrl: 'js/templates/skills/views/skills_view.html',
-    //   controller: 'SkillsController',
-    //   controllerAs: 'skillsctrl'
-    // })
+    .when('/skills', {
+      templateUrl: 'js/templates/skills/views/skills_view.html'
+      // controller: 'SkillsController',
+      // controllerAs: 'skillsctrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
