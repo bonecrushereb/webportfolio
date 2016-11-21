@@ -34,18 +34,13 @@ portApp.config(['$routeProvider', function($rp) {
     .when('/responsibuyer', {
       templateUrl: 'js/templates/webprojects/views/responsibuyer_view.html'
     })
-    .when('/gameprojects', {
-      templateUrl: 'js/templates/gameprojects/views/gameprojects_view.html',
-      controller: 'GameProjectsController',
-      controllerAs: 'gameprojectsctrl'
-    })
     .when('/create', {
       templateUrl: 'js/templates/create/views/create_view.html'
     })
     .when('/skills', {
-      templateUrl: 'js/templates/skills/views/skills_view.html'
-      // controller: 'SkillsController',
-      // controllerAs: 'skillsctrl'
+      templateUrl: 'js/templates/skills/views/skills_view.html',
+      controller: 'SkillsController',
+      controllerAs: 'skillsctrl'
     })
     .otherwise({
       redirectTo: '/'
