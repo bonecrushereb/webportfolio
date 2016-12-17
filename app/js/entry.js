@@ -9,10 +9,14 @@ require('./webprojects')(portApp);
 portApp.config(['$routeProvider', function($rp) {
   $rp
     .when('/', {
-      templateUrl: 'js/templates/home/views/home_view.html'
+      templateUrl: 'js/templates/home/views/home_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/about', {
-      templateUrl: 'js/templates/about/views/about_view.html'
+      templateUrl: 'js/templates/about/views/about_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/webprojects', {
       templateUrl: 'js/templates/webprojects/views/webprojects_view.html',
@@ -20,19 +24,29 @@ portApp.config(['$routeProvider', function($rp) {
       controllerAs: 'webprojectsctrl'
     })
     .when('/hue-manatee', {
-      templateUrl: 'js/templates/webprojects/views/hue-manatee_view.html'
+      templateUrl: 'js/templates/webprojects/views/hue-manatee_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/ebb-tracker', {
-      templateUrl: 'js/templates/webprojects/views/ebb-tracker_view.html'
+      templateUrl: 'js/templates/webprojects/views/ebb-tracker_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/twitter-react', {
-      templateUrl: 'js/templates/webprojects/views/twitter-react_view.html'
+      templateUrl: 'js/templates/webprojects/views/twitter-react_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/knowhuddle', {
-      templateUrl: 'js/templates/webprojects/views/knowhuddle_view.html'
+      templateUrl: 'js/templates/webprojects/views/knowhuddle_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/responsibuyer', {
-      templateUrl: 'js/templates/webprojects/views/responsibuyer_view.html'
+      templateUrl: 'js/templates/webprojects/views/responsibuyer_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
     })
     .when('/create', {
       templateUrl: 'js/templates/create/views/create_view.html'

@@ -2,12 +2,21 @@ const angular = require('angular');
 var baseUrl = require('../../config').baseUrl;
 
 module.exports = function(app) {
-  app.controller('SkillsController', ['pResource', 'pStore', function(Resource, pStore) {
+  app.controller('SkillsController', ['pResource', 'pStore', '$location', function (Resource, pStore, $location) {
     this.pStore = pStore;
     this.skills = pStore.skills;
     this.addSkill = pStore.addSkill.bind(pStore);
     this.errors = [];
     this.remote = new Resource(this.skills, this.errors, baseUrl + '/api/skills');
+
+    if ($location.path() === '/') {
+      angular.element(document.querySelector('.main'))
+        .css({ background: 'url(\'../images/wavebackground.jpg\')center center' });
+    } else {
+      angular.element(document.querySelector('.main'))
+        .css({ background: '#f6da90' });
+    }
+
     this.getAll = this.remote.getAll.bind(this.remote);
 
     this.createSkill = function() {
