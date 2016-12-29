@@ -23,6 +23,11 @@ portApp.config(['$routeProvider', function($rp) {
       controller: 'WebProjectsController',
       controllerAs: 'webprojectsctrl'
     })
+    .when('/personal-website', {
+      templateUrl: 'js/templates/webprojects/views/portfolio_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
+    })
     .when('/hue-manatee', {
       templateUrl: 'js/templates/webprojects/views/hue-manatee_view.html',
       controller: 'WebProjectsController',
