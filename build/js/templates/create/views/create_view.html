@@ -1,0 +1,61 @@
+<section class="create">
+  <h1 class="createHeader">Game Art</h1>
+  <article class="create" data-ng-controller="GameProjectsController as gameprojectsctrl" data-ng-init="gameprojectsctrl.getAll()">
+    <gameproject-form
+    data-button-text="Create Project"
+    data-action="create"
+    data-gameproject="gameprojectsctrl.newGameProject">
+  </gameproject-form>
+  <ul class="gameprojectlist">
+    <gameproject-list-item data-ng-repeat="gameproject in gameprojectsctrl.gameprojects" data-gameproject="gameproject">
+      <gameproject-form
+      data-ng-if="gameproject.editing"
+      data-button-text="Update Project"
+      data-action="update"
+      data-gameproject="gameproject">
+      <button class="btn-cancel" data-ng-click="gameprojectctrl.cancelGameProject(gameproject)">Cancel</button>
+    </gameproject-form>
+  </gameproject-list-item>
+</ul>
+</article>
+
+<h1 class="createHeader">Web Development</h1>
+<article class="create" data-ng-controller="WebProjectsController as webprojectsctrl" data-ng-init="webprojectsctrl.getAll()">
+  <webproject-form
+  data-button-text="Create Project"
+  data-action="create"
+  data-webproject="webprojectsctrl.newWebProject">
+</webproject-form>
+<ul class="webprojectlist">
+  <webproject-list-item data-ng-repeat="webproject in webprojectsctrl.webprojects" data-webproject="webproject">
+    <webproject-form
+    data-ng-if="webproject.editing"
+    data-button-text="Update Project"
+    data-action="update"
+    data-webproject="webproject">
+    <button class="btn-cancel" data-ng-click="webprojectsctrl.cancelWebProject(webproject)">Cancel</button>
+  </webproject-form>
+</webproject-list-item>
+</ul>
+</article>
+
+<h1 class="createHeader">Skill</h1>
+<article class="create" data-ng-controller="SkillsController as skillsctrl" data-ng-init="skillsctrl.getAll()">
+  <skill-form
+  data-button-text="Create Skill"
+  data-action="create"
+  data-skill="skillsctrl.newSkill">
+</skill-form>
+<ul class=skilllist>
+  <skill-list-item data-ng-repeat="skill in skillsctrl.skills" data-skill="skill">
+    <skill-form
+    data-ng-if="skill.editing"
+    data-button-text="Update Skill"
+    data-action="update"
+    data-skill="skill">
+    <button class="btn-cancel" data-ng-click="skillsctrl.cancelSkill(skill)">Cancel</button>
+  </skill-form>
+</skill-list-item>
+</ul>
+</article>
+</section>

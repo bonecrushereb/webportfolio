@@ -1,0 +1,40 @@
+<header>
+  <h1><a href="/#/">Benjamin Nolan</a></h1>
+  <footer>
+    <ul>
+      <a href="https://www.facebook.com/BenEnOlan"><li class="fa fa-facebook-official fa-2x"></li></a>
+      <a href="https://github.com/bonecrushereb"><li class="fa fa-github fa-2x"></li></a>
+      <a href="https://www.linkedin.com/in/ben-nolan-28513349"><li class="fa fa-linkedin-square fa-2x"></li></a>
+      <a href="https://twitter.com/bonecrushereb"><li class="fa fa-twitter fa-2x"></li></a>
+    </ul>
+  </footer>
+  <ul class="contactInfo">
+    <li>bnolancgartist@gmail.com</li>
+    <li>(858)366-5866</li>
+  </ul>
+  <nav class="pagenav">
+    <ul>
+      <li><a href="/#/">Home</a></li>
+      <li><a href="/#/webprojects">Projects</a></li>
+      <li><a href="/#/skills">Skills</a></li>
+      <li><a href="/#/about">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="skillsPage">
+  <h1>Skills</h1>
+  <article class="skills" data-ng-init="skillsctrl.getAll()">
+    <h2>Front End</h2>
+    <ul>
+      <li data-ng-repeat="skill in skillsctrl.skills" data-ng-if="skill.career == 'frontend'">{{skill.skill}}</li>
+    </ul>
+    <h2>Back End</h2>
+    <ul>
+      <li data-ng-repeat="skill in skillsctrl.skills" data-ng-if="skill.career == 'backend'">{{skill.skill}}</li>
+    </ul>
+    <h2>Project Control</h2>
+    <ul>
+      <li data-ng-repeat="skill in skillsctrl.skills" data-ng-if="skill.career == 'control'">{{skill.skill}}</li>
+    </ul>
+  </article>
+</section>

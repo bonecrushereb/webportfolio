@@ -5,7 +5,7 @@ const webprojectRouter = require(__dirname + '/routes/webprojectrouter');
 const gameprojectRouter = require(__dirname + '/routes/gameprojectrouter');
 const skillRouter = require(__dirname + '/routes/skillrouter');
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOD_URI ||
+mongoose.connect(process.env.MONGODB_URI ||
 'mongodb://localhost/projectskill_db');
 
 app.use('/api', webprojectRouter);
