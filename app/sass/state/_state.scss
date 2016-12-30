@@ -1,0 +1,72 @@
+@media screen and (min-width: 600px) {
+
+  h1{
+    font-size: 48px;
+    width: 50px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+
+  .home {
+    background: none;
+    .surftitle {
+      visibility: visible;
+      position: absolute;
+      top: 170px;
+      width: 65%;
+    }
+  }
+
+header {
+  .contactInfo {
+    font-size: 28px;
+    margin-right: 80px;
+    margin-top: 20px;
+  }
+}
+
+  .navBoard {
+    width: 12%;
+    position: relative;
+    bottom: 50px;
+    left: 75%;
+  }
+
+  .navHeader {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 85%;
+    z-index: 1;
+
+    li {
+      font-size: 20px;
+      margin-top: 60px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 85%;
+    right: 200px;
+    z-index: 1;
+    li {
+      padding-left: 5px;
+    }
+
+    .fa-facebook-official {
+      color: #3b5998;
+    }
+
+    .fa-linkedin-square {
+      color: #0077B5;
+    }
+
+    .fa-twitter {
+      color: #00aced;
+    }
+  }
+}

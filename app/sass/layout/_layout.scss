@@ -6,22 +6,23 @@ header {
   height:150px;
 
   h1{
-    font-size: 48px;
+    font-size: 28px;
     width: 50px;
-    margin-left: 40px;
-    margin-top: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
   .contactInfo {
-    font-size: 24px;
-    margin-right: 40px;
-    margin-top: 40px;
+    font-size: 16px;
+    margin-right: 80px;
+    margin-top: 80px;
   }
 }
 
 .navBoard {
+  width: 40%;
   position: relative;
-  left: 20%;
+  left: 30%;
 }
 
 .profilepic {
@@ -174,4 +175,10 @@ section {
 
 .home {
   background: none;
+  .surftitle {
+    visibility: hidden;
+    position: absolute;
+    top: 170px;
+    width: 65%;
+  }
 }
