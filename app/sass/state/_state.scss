@@ -34,11 +34,11 @@ header {
   }
 
   .navHeader {
-    top: 0;
     text-align: center;
     display: flex;
     justify-content: flex-end;
     position: absolute;
+    top: 20%;
     left: 85%;
     z-index: 1;
 
