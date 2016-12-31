@@ -2,8 +2,8 @@
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 600px;
-  right: 280px;
+  top: 550px;
+  left: 36%;
   z-index: 1;
   li {
     padding-left: 5px;
@@ -26,8 +26,8 @@ footer {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 90px;
-  right: 200px;
+  top: 185px;
+  left: 25%;
   z-index: 1;
   li {
     padding-left: 5px;
@@ -45,3 +45,27 @@ footer {
     color: #00aced;
   }
 }
+
+// footer {
+//   display: flex;
+//   justify-content: flex-end;
+//   position: absolute;
+//   top: 20px;
+//   left: 300px;
+//     z-index: 1;
+//   li {
+//     padding-left: 5px;
+//   }
+//
+//   .fa-facebook-official {
+//     color: #3b5998;
+//   }
+//
+//   .fa-linkedin-square {
+//     color: #0077B5;
+//   }
+//
+//   .fa-twitter {
+//     color: #00aced;
+//   }
+// }

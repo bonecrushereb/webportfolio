@@ -6,28 +6,30 @@ header {
   height:150px;
 
   h1{
-    font-size: 48px;
+    font-size: 28px;
     width: 50px;
-    margin-left: 40px;
-    margin-top: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
   .contactInfo {
-    font-size: 24px;
-    margin-right: 40px;
-    margin-top: 40px;
+    font-size: 16px;
+    margin-right: 80px;
+    margin-top: 80px;
   }
 }
 
 .navBoard {
+  width: 40%;
   position: relative;
-  left: 20%;
+  left: 30%;
 }
 
 .profilepic {
+  width: 50%;
   position: relative;
-  left: 100px;
-  top: 150px;
+  left: 20%;
+  top: 100px;
 }
 
 .project {
@@ -35,12 +37,11 @@ header {
   border-radius: 20px;
   text-align: center;
   position: relative;
-  margin: 50px;
-  width: 50%;
+  margin-bottom: 50px;
+  width: 100%;
   background-color: white;
   img {
-    margin: 20px;
-    width: 75%;
+    width: 100%;
     border: solid black 1px;
   }
   h3 {
@@ -50,18 +51,18 @@ header {
 
 .availability {
   position: absolute;
-  left: 600px;
-  top: 250px;
+  right: 5%;
+  top: 450px;
   h2 {
     position: relative;
-    left: 190px;
+    left: 10%;
     color: #33a805;
     font-size: 36px;
     text-decoration: underline;
   }
   ul {
     li {
-      font-size: 24px;
+      font-size: 16px;
       padding: 10px;
       display: inline-block;
     }
@@ -76,13 +77,35 @@ header {
   }
 }
 
-section, .about {
+section {
   position: absolute;
   top: 350px;
   left: 600px;
   width: 75%;
   article {
-    width: 50%;
+    width: 100%;
+    padding: 10px;
+    h2 {
+      padding-bottom: 5px;
+      font-size: 24px;
+    }
+    p{
+      font-size: 18px;
+      line-height: 20px;
+    }
+    li {
+      padding: 5px;
+      font-size: 18px;
+    }
+  }
+}
+
+.about {
+  position: absolute;
+  top: 600px;
+  width: 75%;
+  article {
+    width: 100%;
     padding: 10px;
     h2 {
       padding-bottom: 5px;
@@ -101,9 +124,9 @@ section, .about {
 
 section {
   position: relative;
-  top: 100px;
-  left: 200px;
-  margin: 50px;
+  top: 80px;
+  left: 0px;
+  margin: 25px;
   margin-top: 0px;
 }
 
@@ -129,22 +152,23 @@ section {
   }
   .projectDetail {
     position: relative;
-    left: 500px;
+    top: 150px;
+    right: 25px;
   }
   .projectdesc {
     font-size: 18px;
   }
   .projectimg {
-    width: 50%;
+    width: 75%;
     position: relative;
     top: 40px;
   }
 }
 
 .links {
+  font-size: 16px;
   position: relative;
-  top: 100px;
-  left: 100px;
+  top: 60px;
 }
 
 .skillsPage {
@@ -155,7 +179,7 @@ section {
   .skills {
     margin-top: 20px;
     position: relative;
-    left: 400px;
+    right: 10%;
   }
   h2 {
     text-decoration: underline;
@@ -174,4 +198,10 @@ section {
 
 .home {
   background: none;
+  .surftitle {
+    visibility: hidden;
+    position: absolute;
+    top: 170px;
+    width: 65%;
+  }
 }
