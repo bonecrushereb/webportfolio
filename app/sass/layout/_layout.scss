@@ -26,6 +26,7 @@ header {
 }
 
 .profilepic {
+  border: 1px $headerColor solid;
   width: 50%;
   position: relative;
   left: 20%;
