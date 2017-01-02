@@ -61,6 +61,11 @@ portApp.config(['$routeProvider', function($rp) {
       controller: 'SkillsController',
       controllerAs: 'skillsctrl'
     })
+    .when('/webprojects/:id', {
+      templateURL: 'js/templates/webprojects/views/webprojects_view.html',
+      controller: 'WebProjectsController',
+      controllerAs: 'webprojectsctrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
