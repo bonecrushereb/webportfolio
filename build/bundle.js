@@ -33086,12 +33086,13 @@
 	// var imageUrl = '../images/wavebackground.jpg';
 	
 	module.exports = function(app) {
-	  app.controller('WebProjectsController', ['pResource', 'pStore', '$location',
-	  function(Resource, pStore, $location) {
+	  app.controller('WebProjectsController', ['$http', 'pResource', 'pStore', '$location',
+	  function($http, Resource, pStore, $location) {
 	    this.pStore = pStore;
 	    this.webprojects = pStore.webprojects;
 	    this.addWebProject = pStore.addWebProject.bind(pStore);
 	    this.errors = [];
+	    this.project = {};
 	    this.remote = new Resource(this.webprojects, this.errors, baseUrl + '/api/webprojects');
 	
 	    if ($location.path() === '/') {
