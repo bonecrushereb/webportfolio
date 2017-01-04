@@ -39,7 +39,7 @@ header {
     justify-content: flex-end;
     position: absolute;
     top: 20%;
-    left: 85%;
+    right: 25px;
     z-index: 1;
 
     li {
@@ -273,11 +273,11 @@ header {
       font-size: 26px;
       font-weight: bold;
     }
-    // .projectDetail {
-    //   width: 75%;
-    //   position: relative;
-    //   left: 500px;
-    // }
+    .projectDetail {
+      width: 75%;
+      position: relative;
+      left: 500px;
+    }
     .projectdesc {
       font-size: 18px;
     }
@@ -287,10 +287,4 @@ header {
       top: 40px;
     }
   }
-
-  // .links {
-  //   position: relative;
-  //   top: 100px;
-  //   left: 100px;
-  // }
 }
