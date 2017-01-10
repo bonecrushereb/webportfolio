@@ -1,206 +1,222 @@
 header {
-  font-family: $openFont;
-  display: flex;
-  justify-content: space-between;
-  background: $headerColor;
-  height:150px;
-
-  h1{
-    font-size: 28px;
-    width: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
-  }
-
-  .contactInfo {
-    font-size: 16px;
-    margin-right: 80px;
-    margin-top: 80px;
-  }
-}
-
-.navBoard {
-  width: 40%;
-  position: relative;
-}
-
-.profilepic {
-  width: 50%;
-  position: relative;
-  left: 20%;
-  top: 100px;
-}
-
-.project {
-  box-shadow: 0px 0px 20px 7px #888888;
-  border-radius: 20px;
-  text-align: center;
-  position: relative;
-  margin-bottom: 50px;
   width: 100%;
-  background-color: white;
-  img {
-    width: 100%;
-    border: solid black 1px;
-  }
-  h3 {
-    font-size: 26px;
-  }
-}
-
-.availability {
-  position: absolute;
-  right: 5%;
-  top: 450px;
-  h2 {
-    position: relative;
-    left: 10%;
-    color: #33a805;
-    font-size: 36px;
-    text-decoration: underline;
-  }
-  ul {
-    li {
-      font-size: 16px;
-      padding: 10px;
-      display: inline-block;
-    }
-  }
-}
-.create{
-  article {
-    width: 75%;
-  }
-  form {
-    margin: 20px;
-  }
-}
-
-section {
-  position: absolute;
-  top: 350px;
-  left: 600px;
-  width: 75%;
-  article {
-    width: 100%;
-    padding: 10px;
-    h2 {
-      padding-bottom: 5px;
-      font-size: 24px;
-    }
-    p{
-      font-size: 18px;
-      line-height: 20px;
-    }
-    li {
-      padding: 5px;
-      font-size: 18px;
-    }
-  }
-}
-
-.about {
-  position: absolute;
-  top: 600px;
-  width: 75%;
-  article {
-    width: 100%;
-    padding: 10px;
-    h2 {
-      padding-bottom: 5px;
-      font-size: 24px;
-    }
-    p{
-      font-size: 18px;
-      line-height: 20px;
-    }
-    li {
-      padding: 5px;
-      font-size: 18px;
-    }
-  }
-}
-
-section {
-  position: relative;
-  top: 80px;
-  left: 0px;
-  margin: 25px;
-  margin-top: 0px;
-}
-
-
-.projectClick {
-  position: absolute;
-  top: 120px;
-  margin-top: 100px;
-  min-height: 100%;
-  margin-bottom: -50px;
-  section {
-    position: inherit;
-  }
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
   h1 {
-    text-align: left;
-    font-size: 40px;
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
-  }
-  h2 {
-    font-size: 26px;
-    font-weight: bold;
-  }
-  .projectDetail {
-    position: relative;
-    top: 150px;
-    right: 25px;
-  }
-  .projectdesc {
-    font-size: 18px;
-  }
-  .projectimg {
-    width: 75%;
-    position: relative;
-    top: 40px;
-  }
-}
-
-.links {
-  font-size: 16px;
-  position: relative;
-  top: 60px;
-}
-
-.skillsPage {
-  h1 {
-    text-align: center;
-    font-size: 40px;
-  }
-  .skills {
+    font-size: 28px;
+    width: 50%;
     margin-top: 20px;
-    position: relative;
-    right: 10%;
+    margin-left: 20px;
   }
-  h2 {
-    text-decoration: underline;
-    font-size: 36px;
-  }
-  ul {
-    columns: 2;
-    margin-bottom: 20px;
-    li {
-      font-size: 16px;
-      margin: 10px;
-      text-transform: uppercase;
-    }
-  }
+}
+.surftitle {
+  display: none;
 }
 
-.home {
-  background: none;
-  .surftitle {
-    visibility: hidden;
-    position: absolute;
-    top: 170px;
-    width: 65%;
-  }
-}
+// header {
+//   font-family: $openFont;
+//   display: flex;
+//   justify-content: space-between;
+//   background: $headerColor;
+//   height:150px;
+//
+//   h1{
+//     font-size: 28px;
+//     width: 50px;
+//     margin-left: 20px;
+//     margin-top: 20px;
+//   }
+//
+//   .contactInfo {
+//     font-size: 16px;
+//     margin-right: 80px;
+//     margin-top: 80px;
+//   }
+// }
+//
+// .navBoard {
+//   width: 40%;
+//   position: relative;
+// }
+//
+// .profilepic {
+//   width: 50%;
+//   position: relative;
+//   left: 20%;
+//   top: 100px;
+// }
+//
+// .project {
+//   box-shadow: 0px 0px 20px 7px #888888;
+//   border-radius: 20px;
+//   text-align: center;
+//   position: relative;
+//   margin-bottom: 50px;
+//   width: 100%;
+//   background-color: white;
+//   img {
+//     width: 100%;
+//     border: solid black 1px;
+//   }
+//   h3 {
+//     font-size: 26px;
+//   }
+// }
+//
+// .availability {
+//   position: absolute;
+//   right: 5%;
+//   top: 450px;
+//   h2 {
+//     position: relative;
+//     left: 10%;
+//     color: #33a805;
+//     font-size: 36px;
+//     text-decoration: underline;
+//   }
+//   ul {
+//     li {
+//       font-size: 16px;
+//       padding: 10px;
+//       display: inline-block;
+//     }
+//   }
+// }
+// .create{
+//   article {
+//     width: 75%;
+//   }
+//   form {
+//     margin: 20px;
+//   }
+// }
+//
+// section {
+//   position: absolute;
+//   top: 350px;
+//   left: 600px;
+//   width: 75%;
+//   article {
+//     width: 100%;
+//     padding: 10px;
+//     h2 {
+//       padding-bottom: 5px;
+//       font-size: 24px;
+//     }
+//     p{
+//       font-size: 18px;
+//       line-height: 20px;
+//     }
+//     li {
+//       padding: 5px;
+//       font-size: 18px;
+//     }
+//   }
+// }
+//
+// .about {
+//   position: absolute;
+//   top: 600px;
+//   width: 75%;
+//   article {
+//     width: 100%;
+//     padding: 10px;
+//     h2 {
+//       padding-bottom: 5px;
+//       font-size: 24px;
+//     }
+//     p{
+//       font-size: 18px;
+//       line-height: 20px;
+//     }
+//     li {
+//       padding: 5px;
+//       font-size: 18px;
+//     }
+//   }
+// }
+//
+// section {
+//   position: relative;
+//   top: 80px;
+//   left: 0px;
+//   margin: 25px;
+//   margin-top: 0px;
+// }
+//
+//
+// .projectClick {
+//   position: absolute;
+//   top: 120px;
+//   margin-top: 100px;
+//   min-height: 100%;
+//   margin-bottom: -50px;
+//   section {
+//     position: inherit;
+//   }
+//   h1 {
+//     text-align: left;
+//     font-size: 40px;
+//     border-bottom: 1px solid black;
+//     margin-bottom: 10px;
+//   }
+//   h2 {
+//     font-size: 26px;
+//     font-weight: bold;
+//   }
+//   .projectDetail {
+//     position: relative;
+//     top: 150px;
+//     right: 25px;
+//   }
+//   .projectdesc {
+//     font-size: 18px;
+//   }
+//   .projectimg {
+//     width: 75%;
+//     position: relative;
+//     top: 40px;
+//   }
+// }
+//
+// .links {
+//   font-size: 16px;
+//   position: relative;
+//   top: 60px;
+// }
+//
+// .skillsPage {
+//   h1 {
+//     text-align: center;
+//     font-size: 40px;
+//   }
+//   .skills {
+//     margin-top: 20px;
+//     position: relative;
+//     right: 10%;
+//   }
+//   h2 {
+//     text-decoration: underline;
+//     font-size: 36px;
+//   }
+//   ul {
+//     columns: 2;
+//     margin-bottom: 20px;
+//     li {
+//       font-size: 16px;
+//       margin: 10px;
+//       text-transform: uppercase;
+//     }
+//   }
+// }
+//
+// .home {
+//   background: none;
+//   .surftitle {
+//     visibility: hidden;
+//     position: absolute;
+//     top: 170px;
+//     width: 65%;
+//   }
+// }

@@ -1,42 +1,43 @@
 .navHeader {
-  text-align: center;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  top: 150px;
-  right: 35%;
   z-index: 1;
-
-  li {
-    font-size: 20px;
-    margin-top: 60px;
-  }
-}
-
-.pagenav {
-  display: block;
-  height: 40px;
-  position: absolute;
-  top: 100px;
-  text-align: center;
-  width: 100%;
-  margin-top: 35px;
-  padding: 0;
-  list-style: none;
-  background: $headerColor;
   ul {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
-  li {
-    width: 250px;
-    display: inline;
-    padding: 0;
-    margin-right: 20px;
-    font-size: 1.5em;
-    padding-right: 40px;
-    list-style-type: none;
-    height: 40px;
+    position: relative;
+    li {
+      width: 50px;
+      font-size: 20px;
+      margin-top: 60px;
+    }
   }
 }
+
+.navBoard {
+  position: absolute;
+}
+
+// .pagenav {
+//   display: block;
+//   height: 40px;
+//   position: absolute;
+//   top: 100px;
+//   text-align: center;
+//   width: 100%;
+//   margin-top: 35px;
+//   padding: 0;
+//   list-style: none;
+//   background: $headerColor;
+//   ul {
+//     width: 100%;
+//     padding: 0px;
+//     margin: 0px;
+//   }
+//   li {
+//     width: 250px;
+//     display: inline;
+//     padding: 0;
+//     margin-right: 20px;
+//     font-size: 1.5em;
+//     padding-right: 40px;
+//     list-style-type: none;
+//     height: 40px;
+//   }
+// }
