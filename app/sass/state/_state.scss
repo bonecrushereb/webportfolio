@@ -1,16 +1,70 @@
 @media screen and (min-width: 600px) {
   header {
     width: 100%;
-    margin-top: 30px;
     h1 {
       width: 50%;
       font-size: 48px;
       margin-left: 0px;
-      margin-top: 0px;
+      margin-top: 30px;
     }
   }
   .surftitle {
+    position: relative;
+    bottom: 600px;
+    width: 951px;
     display: block;
+  }
+
+  div {
+    margin: 0 auto;
+    margin-right: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    background: url("../images/navBoard.png") no-repeat;
+    width: 171px;
+    height: 576px;
+    background-size: contain;
+    .navHeader {
+      ul {
+        position: relative;
+        top: 50px;
+        li {
+          display: block;
+          text-align: center;
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  .projectList {
+    article {
+      img {
+        width: 50%;
+      }
+    }
+    h3 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .pageFooter {
+    ul {
+      margin-left: 1000px;
+      margin-right: 40px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .surftitle {
+    width: 50%;
   }
 }
 // @media screen and (min-width: 600px) {
