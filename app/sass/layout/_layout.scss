@@ -2,6 +2,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-content: center;
   height: 150px;
   h1 {
     font-size: 28px;
@@ -46,11 +47,57 @@ header {
   }
 }
 
-h1 {
+.projetClick {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.projectTitle {
+  width: 100%;
   position: relative;
   margin-right: 300px;
   margin-top: 20px;
   font-size: 28px;
+  border-bottom: 1px solid black;
+}
+
+.projectDesc {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.projectimg {
+  margin: 0 auto;
+  border: 1px solid $headerColor;
+  width: 75%;
+}
+
+.links {
+  ul {
+    li {
+      padding: 5px;
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+}
+
+.projectDetail {
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    padding: 5px;
+    font-size: 12px;
+  }
+  ul {
+    margin-bottom: 10px;
+    li {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
 }
 
 // header {

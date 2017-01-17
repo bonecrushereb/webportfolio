@@ -58,6 +58,25 @@
       margin-right: 40px;
     }
   }
+
+  .projetClick {
+    position: relative;
+  }
+
+  .projectTitle {
+    text-align: left;
+    font-size: 48px;
+    margin-left: 50px;
+  }
+
+  .projectDesc {
+    margin: 10px;
+  }
+
+  .projectimg {
+    position: absolute;
+    width: 25%;
+  }
 }
 
 
