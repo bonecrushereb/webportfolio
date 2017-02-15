@@ -1,296 +1,110 @@
 @media screen and (min-width: 600px) {
-
-  h1{
-    font-size: 48px;
-    width: 50px;
-    margin-left: 40px;
-    margin-top: 20px;
-  }
-
-  .home {
-    background: none;
-    .surftitle {
-      visibility: visible;
-      position: absolute;
-      top: 170px;
-      width: 65%;
-    }
-  }
-
-header {
-  .contactInfo {
-    font-size: 28px;
-    margin-right: 80px;
-    margin-top: 20px;
-  }
-}
-
-  .navBoard {
-    width: 12%;
-    position: relative;
-    bottom: 50px;
-    left: 75%;
-  }
-
-  .navHeader {
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    left: 85%;
-    z-index: 1;
-
-    li {
-      font-size: 20px;
-      margin-top: 60px;
-    }
-  }
-
-  .footer {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 85%;
-    right: 200px;
-    z-index: 1;
-    li {
-      padding-left: 5px;
-    }
-
-    .fa-facebook-official {
-      color: #3b5998;
-    }
-
-    .fa-linkedin-square {
-      color: #0077B5;
-    }
-
-    .fa-twitter {
-      color: #00aced;
-    }
-  }
-
-  .pagenav {
-    display: block;
-    height: 40px;
-    position: absolute;
-    top: 100px;
-    text-align: center;
+  header {
     width: 100%;
-    margin-top: 40px;
-    padding: 0;
-    list-style: none;
-    background: $headerColor;
-    ul {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-    }
-    li {
-      width: 250px;
-      display: inline;
-      padding: 0;
-      margin-right: 40px;
-      font-size: 1.5em;
-      padding-right: 40px;
-      list-style-type: none;
-      height: 40px;
+    h1 {
+      width: 50%;
+      font-size: 48px;
+      margin-left: 0px;
+      margin-top: 30px;
     }
   }
-
-  footer {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 90px;
-    right: 200px;
-    z-index: 1;
-    li {
-      padding-left: 5px;
-    }
-
-    .fa-facebook-official {
-      color: #3b5998;
-    }
-
-    .fa-linkedin-square {
-      color: #0077B5;
-    }
-
-    .fa-twitter {
-      color: #00aced;
-    }
+  .surftitle {
+    position: relative;
+    bottom: 600px;
+    width: 951px;
+    display: block;
   }
 
-  .project {
-    box-shadow: 0px 0px 20px 7px #888888;
-    border-radius: 20px;
+  div {
+    margin: 0 auto;
+    margin-right: 40px;
     text-align: center;
     position: relative;
-    margin: 50px;
-    // width: 50%;
-    background-color: white;
-    img {
-      margin: 20px;
-      width: 75%;
-      border: solid black 1px;
+    bottom: 40px;
+    background: url("../images/navBoard.png") no-repeat;
+    width: 171px;
+    height: 576px;
+    background-size: contain;
+    .navHeader {
+      ul {
+        position: relative;
+        top: 50px;
+        li {
+          display: block;
+          text-align: center;
+          width: 100%;
+          font-size: 20px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  .projectList {
+    article {
+      img {
+        width: 50%;
+      }
     }
     h3 {
-      font-size: 26px;
+      font-size: 36px;
+      margin-bottom: 40px;
     }
   }
 
-  section {
-    position: relative;
-    top: 50px;
-    // left: 150px;
-    margin: 50px;
-    margin-top: 0px;
+  .pageFooter {
+    right: 120px;
+  }
+
+  .projectTitle {
+    text-align: left;
+    font-size: 48px;
+    margin-left: 50px;
+  }
+
+  .projectDesc {
+    margin: 10px;
+  }
+
+  .projectimg {
+    width: 25%;
+  }
+  .projectDetail > p {
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    line-height: 20px;
   }
 
   .skillsPage {
-    position: absolute;
-    top: 350px;
-    left: 150px;
-
     h1 {
-      text-align: center;
-      font-size: 40px;
-    }
-    .skills {
-      margin-top: 20px;
-      position: relative;
-    }
-    h2 {
-      text-decoration: underline;
-      font-size: 36px;
-    }
-    ul {
-      columns: 2;
       margin-bottom: 20px;
-      li {
-        font-size: 16px;
-        margin: 10px;
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  .about {
-    position: absolute;
-    top: 450px;
-    left: 500px;
-    width: 50%;
-    article {
-      width: 100%;
-      padding: 10px;
-      h2 {
-        padding-bottom: 5px;
-        font-size: 24px;
-      }
-      p{
-        font-size: 18px;
-        line-height: 20px;
-      }
-      li {
-        padding: 5px;
-        font-size: 18px;
-      }
-    }
-  }
-
-  section {
-    top: 100px;
-    width: 75%;
-    article {
-      width: 100%;
-      padding: 10px;
-      h2 {
-        padding-bottom: 5px;
-        font-size: 24px;
-      }
-      p{
-        font-size: 18px;
-        line-height: 20px;
-      }
-      li {
-        padding: 5px;
-        font-size: 18px;
-      }
-    }
-  }
-
-  .availability {
-    width: 50%;
-    position: absolute;
-    left: 500px;
-    top: 250px;
-    margin: 0px;
-    h2 {
-      width: 50%;
-      position: relative;
-      left: 100px;
-      color: #33a805;
-      font-size: 36px;
-      text-decoration: underline;
     }
     ul {
-      position: relative;
-      left: 50px;
+      margin-left: 400px;
+      margin-right: 400px;
+      columns: 2;
       li {
-        font-size: 24px;
-        padding: 10px;
-        display: inline-block;
+        font-size: 18px;
       }
     }
   }
 
-  .profilepic {
-    width: 25%;
-    position: relative;
-    left: 100px;
-    top: 150px;
+  .profilePic {
+    text-align: justify;
   }
+}
 
-  .projectClick {
-    position: absolute;
-    top: 120px;
-    margin-top: 100px;
-    min-height: 100%;
-    margin-bottom: -50px;
-    section {
-      position: inherit;
-    }
-    h1 {
-      text-align: left;
-      font-size: 40px;
-      border-bottom: 1px solid black;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 26px;
-      font-weight: bold;
-    }
-    .projectDetail {
-      position: relative;
-      left: 500px;
-    }
-    .projectdesc {
-      font-size: 18px;
-    }
-    .projectimg {
-      width: 50%;
-      position: relative;
-      top: 40px;
-    }
+
+@media screen and (max-width: 1000px) {
+  .surftitle {
+    width: 50%;
   }
-
-  .links {
-    position: relative;
-    top: 100px;
-    left: 100px;
-    // ul {
-    //   width: 50px;
-    // }
+  .skillsPage {
+    ul {
+      margin-left: 0px;
+      margin-right: 0px;
+      columns: 1;
+    }
   }
 }
