@@ -26,7 +26,7 @@
   <article class="skills" data-ng-init="skillsctrl.getAll()">
     <h2>Front End</h2>
     <ul>
-      <li data-ng-repeat="skill in skillsctrl.skills" data-ng-if="skill.career == 'frontend'">{{skill.skill}}</li>
+      <li data-ng-repeat="skill in skillsctrl.skills" data-ng-if="skill.career == 'frontend'">{{skill.skill.toUpperCase()}}</li>
     </ul>
     <h2>Back End</h2>
     <ul>
