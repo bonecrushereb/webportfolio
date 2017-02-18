@@ -101,10 +101,12 @@
   }
 
   .about {
-    margin-left: 150px;
-    text-align: justify;
     h2 {
       margin-bottom: 10px;
+    }
+    p {
+      margin-left: 150px;
+      text-align: justify;
     }
   }
 }
