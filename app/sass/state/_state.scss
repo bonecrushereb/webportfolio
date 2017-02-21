@@ -69,12 +69,15 @@
   .projectimg {
     width: 25%;
   }
-  .projectDetail > p {
-    text-align: justify;
+  .projectDetail > span {
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 20px;
     line-height: 20px;
+  }
+
+  .projectDetail > p {
+    text-align: justify;
   }
 
   .skillsPage {
