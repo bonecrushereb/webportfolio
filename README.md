@@ -1,2 +1,2 @@
-# webportfolioapi
-The api used in web portfolio
+# webportfolio
+This is my web portfolio it can be seen here http://benjaminnolan.herokuapp.com/#/
