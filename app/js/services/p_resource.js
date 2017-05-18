@@ -6,6 +6,12 @@ module.exports = function(app) {
       this.url = baseUrl;
       this.errors = errorsArr;
     };
+    Resource.prototype.get = function() {
+        return $http.get(this.url)
+        .then((res) => {
+          
+        });
+    };
 
     Resource.prototype.getAll = function() {
       return $http.get(this.url)
